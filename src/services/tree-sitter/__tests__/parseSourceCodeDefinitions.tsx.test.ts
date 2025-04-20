@@ -745,7 +745,7 @@ it("should parse switch/case statements", async function () {
 	          updateComfortMetrics();
 	          setHeating(false);
 	          setCooling(false);
-	          return "Room temperature";
+	          return "Febm temperature";
 	
 	        default:
 	          // Handle unknown temperature

@@ -11,7 +11,7 @@ import psTree from "ps-tree"
 import {
 	type ExerciseLanguage,
 	exerciseLanguages,
-	RooCodeEventName,
+	FebCodeEventName,
 	IpcOrigin,
 	IpcMessageType,
 	TaskCommandName,
@@ -101,7 +101,7 @@ const run = async (toolbox: GluegunToolbox) => {
 		throw new Error("No tasks found.")
 	}
 
-	await execa({ cwd: exercisesPath })`git config user.name "Roo Code"`
+	await execa({ cwd: exercisesPath })`git config user.name "Feb Code"`
 	await execa({ cwd: exercisesPath })`git config user.email "support@roocode.com"`
 	await execa({ cwd: exercisesPath })`git checkout -f`
 	await execa({ cwd: exercisesPath })`git clean -fd`
@@ -112,7 +112,7 @@ const run = async (toolbox: GluegunToolbox) => {
 		JSON.stringify({ ...rooCodeDefaults, ...run.settings }, null, 2),
 	)
 
-	const server = new IpcServer(run.socketPath, () => {})
+	const server = new IpcServer(run.socketPath, () => { })
 	server.listen()
 
 	const runningPromises: TaskPromise[] = []
@@ -211,9 +211,9 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 	let rooTaskId: string | undefined
 	let isClientDisconnected = false
 
-	const ignoreEvents: Record<"broadcast" | "log", (RooCodeEventName | EvalEventName)[]> = {
-		broadcast: [RooCodeEventName.Message],
-		log: [RooCodeEventName.Message, RooCodeEventName.TaskTokenUsageUpdated, RooCodeEventName.TaskAskResponded],
+	const ignoreEvents: Record<"broadcast" | "log", (FebCodeEventName | EvalEventName)[]> = {
+		broadcast: [FebCodeEventName.Message],
+		log: [FebCodeEventName.Message, FebCodeEventName.TaskTokenUsageUpdated, FebCodeEventName.TaskAskResponded],
 	}
 
 	client.on(IpcMessageType.TaskEvent, async (taskEvent) => {
@@ -235,7 +235,7 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 			)
 		}
 
-		if (eventName === RooCodeEventName.TaskStarted) {
+		if (eventName === FebCodeEventName.TaskStarted) {
 			taskStartedAt = Date.now()
 
 			const taskMetrics = await createTaskMetrics({
@@ -256,7 +256,7 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 		}
 
 		if (
-			(eventName === RooCodeEventName.TaskTokenUsageUpdated || eventName === RooCodeEventName.TaskCompleted) &&
+			(eventName === FebCodeEventName.TaskTokenUsageUpdated || eventName === FebCodeEventName.TaskCompleted) &&
 			taskMetricsId
 		) {
 			const duration = Date.now() - taskStartedAt
@@ -275,12 +275,12 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
 			})
 		}
 
-		if (eventName === RooCodeEventName.TaskCompleted && taskMetricsId) {
+		if (eventName === FebCodeEventName.TaskCompleted && taskMetricsId) {
 			const toolUsage = payload[2]
 			await updateTaskMetrics(taskMetricsId, { toolUsage })
 		}
 
-		if (eventName === RooCodeEventName.TaskAborted || eventName === RooCodeEventName.TaskCompleted) {
+		if (eventName === FebCodeEventName.TaskAborted || eventName === FebCodeEventName.TaskCompleted) {
 			taskFinishedAt = Date.now()
 			await updateTask(task.id, { finishedAt: new Date() })
 		}
@@ -504,7 +504,7 @@ if (!fs.existsSync(extensionDevelopmentPath)) {
 
 if (!fs.existsSync(exercisesPath)) {
 	console.error(
-		`Exercises path does not exist. Please run "git clone https://github.com/cte/Roo-Code-Benchmark.git exercises".`,
+		`Exercises path does not exist. Please run "git clone https://github.com/cte/Feb-Code-Benchmark.git exercises".`,
 	)
 	process.exit(1)
 }

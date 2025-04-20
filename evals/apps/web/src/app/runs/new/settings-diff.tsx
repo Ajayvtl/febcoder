@@ -1,12 +1,12 @@
 import { Fragment, HTMLAttributes } from "react"
 
-import { RooCodeSettings, ROO_CODE_SETTINGS_KEYS } from "@evals/types"
+import { FebCodeSettings, ROO_CODE_SETTINGS_KEYS } from "@evals/types"
 
 import { cn } from "@/lib/utils"
 
 type SettingsDiffProps = HTMLAttributes<HTMLDivElement> & {
-	defaultSettings: RooCodeSettings
-	customSettings: RooCodeSettings
+	defaultSettings: FebCodeSettings
+	customSettings: FebCodeSettings
 }
 
 export function SettingsDiff({

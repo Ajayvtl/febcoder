@@ -42,7 +42,7 @@ export async function listFilesTool(
 	try {
 		if (block.partial) {
 			const partialMessage = JSON.stringify({ ...sharedMessageProps, content: "" } satisfies ClineSayTool)
-			await cline.ask("tool", partialMessage, block.partial).catch(() => {})
+			await cline.ask("tool", partialMessage, block.partial).catch(() => { })
 			return
 		} else {
 			if (!relDirPath) {
@@ -56,14 +56,14 @@ export async function listFilesTool(
 
 			const absolutePath = path.resolve(cline.cwd, relDirPath)
 			const [files, didHitLimit] = await listFiles(absolutePath, recursive, 200)
-			const { showRooIgnoredFiles = true } = (await cline.providerRef.deref()?.getState()) ?? {}
+			const { showFebIgnoredFiles = true } = (await cline.providerRef.deref()?.getState()) ?? {}
 
 			const result = formatResponse.formatFilesList(
 				absolutePath,
 				files,
 				didHitLimit,
 				cline.rooIgnoreController,
-				showRooIgnoredFiles,
+				showFebIgnoredFiles,
 			)
 
 			const completeMessage = JSON.stringify({ ...sharedMessageProps, content: result } satisfies ClineSayTool)

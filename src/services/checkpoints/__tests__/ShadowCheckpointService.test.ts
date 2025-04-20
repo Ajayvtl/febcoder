@@ -16,7 +16,7 @@ const tmpDir = path.join(os.tmpdir(), "CheckpointService")
 
 const initWorkspaceRepo = async ({
 	workspaceDir,
-	userName = "Roo Code",
+	userName = "Feb Code",
 	userEmail = "support@roocode.com",
 	testFileName = "test.txt",
 	textFileContent = "Hello, world!",
@@ -64,7 +64,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 			workspaceGit = repo.git
 			testFile = repo.testFile
 
-			service = await klass.create({ taskId, shadowDir, workspaceDir, log: () => {} })
+			service = await klass.create({ taskId, shadowDir, workspaceDir, log: () => { } })
 			await service.initShadowGit()
 		})
 
@@ -316,7 +316,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 				await fs.writeFile(gitattributesPath, "*.lfs filter=lfs diff=lfs merge=lfs -text")
 
 				// Re-initialize the service to trigger a write to .git/info/exclude.
-				service = new klass(service.taskId, service.checkpointsDir, service.workspaceDir, () => {})
+				service = new klass(service.taskId, service.checkpointsDir, service.workspaceDir, () => { })
 				const excludesPath = path.join(service.checkpointsDir, ".git", "info", "exclude")
 				expect((await fs.readFile(excludesPath, "utf-8")).split("\n")).not.toContain("*.lfs")
 				await service.initShadowGit()
@@ -352,7 +352,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 				expect(await fs.readFile(newTestFile, "utf-8")).toBe("Hello, world!")
 
 				// Ensure the git repository was initialized.
-				const newService = await klass.create({ taskId, shadowDir, workspaceDir, log: () => {} })
+				const newService = await klass.create({ taskId, shadowDir, workspaceDir, log: () => { } })
 				const { created } = await newService.initShadowGit()
 				expect(created).toBeTruthy()
 
@@ -388,7 +388,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 				await fs.mkdir(workspaceDir, { recursive: true })
 				const mainGit = simpleGit(workspaceDir)
 				await mainGit.init()
-				await mainGit.addConfig("user.name", "Roo Code")
+				await mainGit.addConfig("user.name", "Feb Code")
 				await mainGit.addConfig("user.email", "support@roocode.com")
 
 				// Create a nested repo inside the workspace.
@@ -396,7 +396,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 				await fs.mkdir(nestedRepoPath, { recursive: true })
 				const nestedGit = simpleGit(nestedRepoPath)
 				await nestedGit.init()
-				await nestedGit.addConfig("user.name", "Roo Code")
+				await nestedGit.addConfig("user.name", "Feb Code")
 				await nestedGit.addConfig("user.email", "support@roocode.com")
 
 				// Add a file to the nested repo.
@@ -437,7 +437,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 					}
 				})
 
-				const service = new klass(taskId, shadowDir, workspaceDir, () => {})
+				const service = new klass(taskId, shadowDir, workspaceDir, () => { })
 				await service.initShadowGit()
 
 				// Verify rename was called with correct paths.
@@ -480,7 +480,7 @@ describe.each([[RepoPerTaskCheckpointService, "RepoPerTaskCheckpointService"]])(
 				const emitSpy = jest.spyOn(EventEmitter.prototype, "emit")
 
 				// Create the service - this will trigger the initialize event.
-				const newService = await klass.create({ taskId, shadowDir, workspaceDir, log: () => {} })
+				const newService = await klass.create({ taskId, shadowDir, workspaceDir, log: () => { } })
 				await newService.initShadowGit()
 
 				// Find the initialize event in the emit calls.

@@ -10,10 +10,10 @@
  * Mock implementation of getBinPath
  * Always returns a valid path to avoid path resolution errors in tests
  *
- * @param vscodeAppRoot - Optional VSCode app root path (can be undefined)
+ * @param vscodeAppFebt - Optional VSCode app root path (can be undefined)
  * @returns Promise resolving to a mock path to the ripgrep binary
  */
-export const getBinPath = jest.fn().mockImplementation(async (vscodeAppRoot?: string): Promise<string> => {
+export const getBinPath = jest.fn().mockImplementation(async (vscodeAppFebt?: string): Promise<string> => {
 	return "/mock/path/to/rg"
 })
 

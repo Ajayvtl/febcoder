@@ -12,27 +12,27 @@
 </div>
 <br>
 <div align="center">
-  <h2>Roo Code 커뮤니티에 참여하세요</h2>
+  <h2>Feb Code 커뮤니티에 참여하세요</h2>
   <p>개발자들과 연결하고, 아이디어를 기여하고, 최신 AI 기반 코딩 도구를 계속 확인하세요.</p>
   
   <a href="https://discord.gg/roocode" target="_blank"><img src="https://img.shields.io/badge/Discord%20참여-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord 참여"></a>
-  <a href="https://www.reddit.com/r/RooCode/" target="_blank"><img src="https://img.shields.io/badge/Reddit%20참여-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit 참여"></a>
+  <a href="https://www.reddit.com/r/FebCode/" target="_blank"><img src="https://img.shields.io/badge/Reddit%20참여-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit 참여"></a>
   
 </div>
 <br>
 <br>
 
 <div align="center">
-<h1>Roo Code (이전 Roo Cline)</h1>
+<h1>Feb Code (이전 Feb Cline)</h1>
 
-<a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline" target="_blank"><img src="https://img.shields.io/badge/VS%20Marketplace에서%20다운로드-blue?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Marketplace에서 다운로드"></a>
-<a href="https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><img src="https://img.shields.io/badge/기능%20요청-yellow?style=for-the-badge" alt="기능 요청"></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline&ssr=false#review-details" target="_blank"><img src="https://img.shields.io/badge/평가%20%26%20리뷰-green?style=for-the-badge" alt="평가 & 리뷰"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=FebVeterinaryInc.roo-cline" target="_blank"><img src="https://img.shields.io/badge/VS%20Marketplace에서%20다운로드-blue?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Marketplace에서 다운로드"></a>
+<a href="https://github.com/FebVetGit/Feb-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><img src="https://img.shields.io/badge/기능%20요청-yellow?style=for-the-badge" alt="기능 요청"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=FebVeterinaryInc.roo-cline&ssr=false#review-details" target="_blank"><img src="https://img.shields.io/badge/평가%20%26%20리뷰-green?style=for-the-badge" alt="평가 & 리뷰"></a>
 <a href="https://docs.roocode.com" target="_blank"><img src="https://img.shields.io/badge/문서-6B46C1?style=for-the-badge&logo=readthedocs&logoColor=white" alt="문서"></a>
 
 </div>
 
-**Roo Code**는 에디터 내에서 작동하는 AI 기반 **자율 코딩 에이전트**입니다. 다음과 같은 기능을 제공합니다:
+**Feb Code**는 에디터 내에서 작동하는 AI 기반 **자율 코딩 에이전트**입니다. 다음과 같은 기능을 제공합니다:
 
 - 자연어로 의사소통
 - 워크스페이스에서 직접 파일 읽기 및 쓰기
@@ -41,15 +41,15 @@
 - OpenAI 호환 또는 커스텀 API/모델과 통합
 - **커스텀 모드**를 통해 "개성"과 기능 조정
 
-유연한 코딩 파트너, 시스템 아키텍트, QA 엔지니어나 제품 관리자와 같은 전문화된 역할을 찾고 있든, Roo Code는 더 효율적으로 소프트웨어를 구축하는 데 도움이 될 수 있습니다.
+유연한 코딩 파트너, 시스템 아키텍트, QA 엔지니어나 제품 관리자와 같은 전문화된 역할을 찾고 있든, Feb Code는 더 효율적으로 소프트웨어를 구축하는 데 도움이 될 수 있습니다.
 
 상세한 업데이트 및 수정 사항은 [CHANGELOG](../CHANGELOG.md)를 확인하세요.
 
 ---
 
-## 🎉 Roo Code 3.13 출시
+## 🎉 Feb Code 3.13 출시
 
-Roo Code 3.13이 사용자 피드백을 바탕으로 새로운 기능과 개선 사항을 제공합니다!
+Feb Code 3.13이 사용자 피드백을 바탕으로 새로운 기능과 개선 사항을 제공합니다!
 
 - **Gemini 2.5 Flash Thinking** - 이제 Gemini 2.5 Flash의 사고 변형을 사용하고 사고 토큰 예산을 지정할 수 있습니다.
 - **UI 개선** - 작업 헤더, 채팅 뷰, 히스토리 미리보기 및 환영 뷰가 시각적으로 업그레이드되었습니다.
@@ -57,7 +57,7 @@ Roo Code 3.13이 사용자 피드백을 바탕으로 새로운 기능과 개선 
 
 ---
 
-## Roo Code는 무엇을 할 수 있나요?
+## Feb Code는 무엇을 할 수 있나요?
 
 - 🚀 자연어 설명에서 **코드 생성**
 - 🔧 기존 코드 **리팩토링 및 디버그**
@@ -68,7 +68,7 @@ Roo Code 3.13이 사용자 피드백을 바탕으로 새로운 기능과 개선 
 
 ## 빠른 시작
 
-1. [Roo Code 설치](https://docs.roocode.com/getting-started/installing)
+1. [Feb Code 설치](https://docs.roocode.com/getting-started/installing)
 2. [AI 제공자 연결](https://docs.roocode.com/getting-started/connecting-api-provider)
 3. [첫 번째 작업 시도](https://docs.roocode.com/getting-started/your-first-task)
 
@@ -76,7 +76,7 @@ Roo Code 3.13이 사용자 피드백을 바탕으로 새로운 기능과 개선 
 
 ### 다중 모드
 
-Roo Code는 전문화된 [모드](https://docs.roocode.com/basic-usage/using-modes)로 사용자의 필요에 맞게 적응합니다:
+Feb Code는 전문화된 [모드](https://docs.roocode.com/basic-usage/using-modes)로 사용자의 필요에 맞게 적응합니다:
 
 - **코드 모드:** 일반적인 코딩 작업용
 - **아키텍트 모드:** 계획 및 기술 리더십용
@@ -86,18 +86,18 @@ Roo Code는 전문화된 [모드](https://docs.roocode.com/basic-usage/using-mod
 
 ### 스마트 도구
 
-Roo Code는 다음과 같은 강력한 [도구](https://docs.roocode.com/basic-usage/how-tools-work)를 제공합니다:
+Feb Code는 다음과 같은 강력한 [도구](https://docs.roocode.com/basic-usage/how-tools-work)를 제공합니다:
 
 - 프로젝트에서 파일 읽기 및 쓰기
 - VS Code 터미널에서 명령 실행
 - 웹 브라우저 제어
 - [MCP(Model Context Protocol)](https://docs.roocode.com/advanced-usage/mcp)를 통한 외부 도구 사용
 
-MCP는 무제한 커스텀 도구를 추가할 수 있게 하여 Roo Code의 기능을 확장합니다. 외부 API와 통합하고, 데이터베이스에 연결하거나, 특수한 개발 도구를 만들 수 있으며 - MCP는 사용자의 특정 요구를 충족하기 위해 Roo Code의 기능을 확장하는 프레임워크를 제공합니다.
+MCP는 무제한 커스텀 도구를 추가할 수 있게 하여 Feb Code의 기능을 확장합니다. 외부 API와 통합하고, 데이터베이스에 연결하거나, 특수한 개발 도구를 만들 수 있으며 - MCP는 사용자의 특정 요구를 충족하기 위해 Feb Code의 기능을 확장하는 프레임워크를 제공합니다.
 
 ### 사용자 정의
 
-다음과 같은 방법으로 Roo Code를 원하는 방식으로 작동하게 할 수 있습니다:
+다음과 같은 방법으로 Feb Code를 원하는 방식으로 작동하게 할 수 있습니다:
 
 - 개인화된 동작을 위한 [커스텀 명령](https://docs.roocode.com/advanced-usage/custom-instructions)
 - 특수 작업을 위한 [커스텀 모드](https://docs.roocode.com/advanced-usage/custom-modes)
@@ -115,8 +115,8 @@ MCP는 무제한 커스텀 도구를 추가할 수 있게 하여 Roo Code의 기
 ### 커뮤니티
 
 - **Discord:** 실시간 도움과 토론을 위한 [Discord 서버 참여](https://discord.gg/roocode)
-- **Reddit:** 경험과 팁을 공유하는 [서브레딧 방문](https://www.reddit.com/r/RooCode)
-- **GitHub:** [문제 보고](https://github.com/RooVetGit/Roo-Code/issues) 또는 [기능 요청](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)
+- **Reddit:** 경험과 팁을 공유하는 [서브레딧 방문](https://www.reddit.com/r/FebCode)
+- **GitHub:** [문제 보고](https://github.com/FebVetGit/Feb-Code/issues) 또는 [기능 요청](https://github.com/FebVetGit/Feb-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)
 
 ---
 
@@ -125,7 +125,7 @@ MCP는 무제한 커스텀 도구를 추가할 수 있게 하여 Roo Code의 기
 1. 저장소 **클론**:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/FebVetGit/Feb-Code.git
 ```
 
 2. **의존성 설치**:
@@ -141,7 +141,7 @@ npm run dev
 ```
 
 4. **디버깅**:
-   VSCode에서 `F5`를 누르거나(**실행** → **디버깅 시작**) Roo Code가 로드된 새 세션을 엽니다.
+   VSCode에서 `F5`를 누르거나(**실행** → **디버깅 시작**) Feb Code가 로드된 새 세션을 엽니다.
 
 웹뷰의 변경 사항은 즉시 나타납니다. 코어 확장에 대한 변경 사항은 확장 호스트를 다시 시작해야 합니다.
 
@@ -163,7 +163,7 @@ code --install-extension bin/roo-cline-<version>.vsix
 
 ## 면책 조항
 
-**참고하세요** Roo Code, Inc는 Roo Code와 관련하여 제공되거나 사용 가능한 모든 코드, 모델 또는 기타 도구, 관련 타사 도구 또는 결과 출력물에 대해 **어떠한** 진술이나 보증도 하지 **않습니다**. 이러한 도구나 출력물 사용과 관련된 **모든 위험**을 감수합니다; 이러한 도구는 **"있는 그대로"** 및 **"사용 가능한 대로"** 제공됩니다. 이러한 위험에는 지적 재산권 침해, 사이버 취약성 또는 공격, 편향, 부정확성, 오류, 결함, 바이러스, 다운타임, 재산 손실 또는 손상 및/또는 개인 상해가 포함될 수 있습니다(단, 이에 국한되지 않음). 귀하는 이러한 도구나 출력물 사용에 대해 전적으로 책임을 집니다(합법성, 적절성 및 결과를 포함하되 이에 국한되지 않음).
+**참고하세요** Feb Code, Inc는 Feb Code와 관련하여 제공되거나 사용 가능한 모든 코드, 모델 또는 기타 도구, 관련 타사 도구 또는 결과 출력물에 대해 **어떠한** 진술이나 보증도 하지 **않습니다**. 이러한 도구나 출력물 사용과 관련된 **모든 위험**을 감수합니다; 이러한 도구는 **"있는 그대로"** 및 **"사용 가능한 대로"** 제공됩니다. 이러한 위험에는 지적 재산권 침해, 사이버 취약성 또는 공격, 편향, 부정확성, 오류, 결함, 바이러스, 다운타임, 재산 손실 또는 손상 및/또는 개인 상해가 포함될 수 있습니다(단, 이에 국한되지 않음). 귀하는 이러한 도구나 출력물 사용에 대해 전적으로 책임을 집니다(합법성, 적절성 및 결과를 포함하되 이에 국한되지 않음).
 
 ---
 
@@ -175,12 +175,12 @@ code --install-extension bin/roo-cline-<version>.vsix
 
 ## 기여자
 
-Roo Code를 더 좋게 만드는 데 도움을 준 모든 기여자에게 감사드립니다!
+Feb Code를 더 좋게 만드는 데 도움을 준 모든 기여자에게 감사드립니다!
 
 <!-- START CONTRIBUTORS SECTION - AUTO-GENERATED, DO NOT EDIT MANUALLY -->
 |<a href="https://github.com/mrubens"><img src="https://avatars.githubusercontent.com/u/2600?v=4" width="100" height="100" alt="mrubens"/><br /><sub><b>mrubens</b></sub></a>|<a href="https://github.com/saoudrizwan"><img src="https://avatars.githubusercontent.com/u/7799382?v=4" width="100" height="100" alt="saoudrizwan"/><br /><sub><b>saoudrizwan</b></sub></a>|<a href="https://github.com/cte"><img src="https://avatars.githubusercontent.com/u/16332?v=4" width="100" height="100" alt="cte"/><br /><sub><b>cte</b></sub></a>|<a href="https://github.com/samhvw8"><img src="https://avatars.githubusercontent.com/u/12538214?v=4" width="100" height="100" alt="samhvw8"/><br /><sub><b>samhvw8</b></sub></a>|<a href="https://github.com/daniel-lxs"><img src="https://avatars.githubusercontent.com/u/57051444?v=4" width="100" height="100" alt="daniel-lxs"/><br /><sub><b>daniel-lxs</b></sub></a>|<a href="https://github.com/a8trejo"><img src="https://avatars.githubusercontent.com/u/62401433?v=4" width="100" height="100" alt="a8trejo"/><br /><sub><b>a8trejo</b></sub></a>|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|<a href="https://github.com/ColemanRoo"><img src="https://avatars.githubusercontent.com/u/117104599?v=4" width="100" height="100" alt="ColemanRoo"/><br /><sub><b>ColemanRoo</b></sub></a>|<a href="https://github.com/stea9499"><img src="https://avatars.githubusercontent.com/u/4163795?v=4" width="100" height="100" alt="stea9499"/><br /><sub><b>stea9499</b></sub></a>|<a href="https://github.com/joemanley201"><img src="https://avatars.githubusercontent.com/u/8299960?v=4" width="100" height="100" alt="joemanley201"/><br /><sub><b>joemanley201</b></sub></a>|<a href="https://github.com/System233"><img src="https://avatars.githubusercontent.com/u/20336040?v=4" width="100" height="100" alt="System233"/><br /><sub><b>System233</b></sub></a>|<a href="https://github.com/hannesrudolph"><img src="https://avatars.githubusercontent.com/u/49103247?v=4" width="100" height="100" alt="hannesrudolph"/><br /><sub><b>hannesrudolph</b></sub></a>|<a href="https://github.com/nissa-seru"><img src="https://avatars.githubusercontent.com/u/119150866?v=4" width="100" height="100" alt="nissa-seru"/><br /><sub><b>nissa-seru</b></sub></a>|
+|<a href="https://github.com/ColemanFeb"><img src="https://avatars.githubusercontent.com/u/117104599?v=4" width="100" height="100" alt="ColemanFeb"/><br /><sub><b>ColemanFeb</b></sub></a>|<a href="https://github.com/stea9499"><img src="https://avatars.githubusercontent.com/u/4163795?v=4" width="100" height="100" alt="stea9499"/><br /><sub><b>stea9499</b></sub></a>|<a href="https://github.com/joemanley201"><img src="https://avatars.githubusercontent.com/u/8299960?v=4" width="100" height="100" alt="joemanley201"/><br /><sub><b>joemanley201</b></sub></a>|<a href="https://github.com/System233"><img src="https://avatars.githubusercontent.com/u/20336040?v=4" width="100" height="100" alt="System233"/><br /><sub><b>System233</b></sub></a>|<a href="https://github.com/hannesrudolph"><img src="https://avatars.githubusercontent.com/u/49103247?v=4" width="100" height="100" alt="hannesrudolph"/><br /><sub><b>hannesrudolph</b></sub></a>|<a href="https://github.com/nissa-seru"><img src="https://avatars.githubusercontent.com/u/119150866?v=4" width="100" height="100" alt="nissa-seru"/><br /><sub><b>nissa-seru</b></sub></a>|
 |<a href="https://github.com/jquanton"><img src="https://avatars.githubusercontent.com/u/88576563?v=4" width="100" height="100" alt="jquanton"/><br /><sub><b>jquanton</b></sub></a>|<a href="https://github.com/KJ7LNW"><img src="https://avatars.githubusercontent.com/u/93454819?v=4" width="100" height="100" alt="KJ7LNW"/><br /><sub><b>KJ7LNW</b></sub></a>|<a href="https://github.com/NyxJae"><img src="https://avatars.githubusercontent.com/u/52313587?v=4" width="100" height="100" alt="NyxJae"/><br /><sub><b>NyxJae</b></sub></a>|<a href="https://github.com/MuriloFP"><img src="https://avatars.githubusercontent.com/u/50873657?v=4" width="100" height="100" alt="MuriloFP"/><br /><sub><b>MuriloFP</b></sub></a>|<a href="https://github.com/d-oit"><img src="https://avatars.githubusercontent.com/u/6849456?v=4" width="100" height="100" alt="d-oit"/><br /><sub><b>d-oit</b></sub></a>|<a href="https://github.com/punkpeye"><img src="https://avatars.githubusercontent.com/u/108313943?v=4" width="100" height="100" alt="punkpeye"/><br /><sub><b>punkpeye</b></sub></a>|
 |<a href="https://github.com/Smartsheet-JB-Brown"><img src="https://avatars.githubusercontent.com/u/171734120?v=4" width="100" height="100" alt="Smartsheet-JB-Brown"/><br /><sub><b>Smartsheet-JB-Brown</b></sub></a>|<a href="https://github.com/monotykamary"><img src="https://avatars.githubusercontent.com/u/1130103?v=4" width="100" height="100" alt="monotykamary"/><br /><sub><b>monotykamary</b></sub></a>|<a href="https://github.com/feifei325"><img src="https://avatars.githubusercontent.com/u/46489071?v=4" width="100" height="100" alt="feifei325"/><br /><sub><b>feifei325</b></sub></a>|<a href="https://github.com/cannuri"><img src="https://avatars.githubusercontent.com/u/91494156?v=4" width="100" height="100" alt="cannuri"/><br /><sub><b>cannuri</b></sub></a>|<a href="https://github.com/lloydchang"><img src="https://avatars.githubusercontent.com/u/1329685?v=4" width="100" height="100" alt="lloydchang"/><br /><sub><b>lloydchang</b></sub></a>|<a href="https://github.com/vigneshsubbiah16"><img src="https://avatars.githubusercontent.com/u/51325334?v=4" width="100" height="100" alt="vigneshsubbiah16"/><br /><sub><b>vigneshsubbiah16</b></sub></a>|
 |<a href="https://github.com/wkordalski"><img src="https://avatars.githubusercontent.com/u/3035587?v=4" width="100" height="100" alt="wkordalski"/><br /><sub><b>wkordalski</b></sub></a>|<a href="https://github.com/Szpadel"><img src="https://avatars.githubusercontent.com/u/1857251?v=4" width="100" height="100" alt="Szpadel"/><br /><sub><b>Szpadel</b></sub></a>|<a href="https://github.com/diarmidmackenzie"><img src="https://avatars.githubusercontent.com/u/16045703?v=4" width="100" height="100" alt="diarmidmackenzie"/><br /><sub><b>diarmidmackenzie</b></sub></a>|<a href="https://github.com/psv2522"><img src="https://avatars.githubusercontent.com/u/87223770?v=4" width="100" height="100" alt="psv2522"/><br /><sub><b>psv2522</b></sub></a>|<a href="https://github.com/Premshay"><img src="https://avatars.githubusercontent.com/u/28099628?v=4" width="100" height="100" alt="Premshay"/><br /><sub><b>Premshay</b></sub></a>|<a href="https://github.com/qdaxb"><img src="https://avatars.githubusercontent.com/u/4157870?v=4" width="100" height="100" alt="qdaxb"/><br /><sub><b>qdaxb</b></sub></a>|
@@ -206,8 +206,8 @@ Roo Code를 더 좋게 만드는 데 도움을 준 모든 기여자에게 감사
 
 ## 라이선스
 
-[Apache 2.0 © 2025 Roo Code, Inc.](../LICENSE)
+[Apache 2.0 © 2025 Feb Code, Inc.](../LICENSE)
 
 ---
 
-**Roo Code를 즐기세요!** 짧은 목줄에 묶어두든 자율적으로 돌아다니게 하든, 여러분이 무엇을 만들지 기대됩니다. 질문이나 기능 아이디어가 있으시면 [Reddit 커뮤니티](https://www.reddit.com/r/RooCode/) 또는 [Discord](https://discord.gg/roocode)를 방문해 주세요. 행복한 코딩 되세요!
+**Feb Code를 즐기세요!** 짧은 목줄에 묶어두든 자율적으로 돌아다니게 하든, 여러분이 무엇을 만들지 기대됩니다. 질문이나 기능 아이디어가 있으시면 [Reddit 커뮤니티](https://www.reddit.com/r/FebCode/) 또는 [Discord](https://discord.gg/roocode)를 방문해 주세요. 행복한 코딩 되세요!

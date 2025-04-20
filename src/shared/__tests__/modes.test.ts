@@ -340,7 +340,7 @@ describe("FileRestrictionError", () => {
 				slug: "debug",
 				name: "Debug",
 				roleDefinition:
-					"You are Roo, an expert software debugger specializing in systematic problem diagnosis and resolution.",
+					"You are Feb, an expert software debugger specializing in systematic problem diagnosis and resolution.",
 				groups: ["read", "edit", "browser", "command", "mcp"],
 			})
 			expect(debugMode?.customInstructions).toContain(
@@ -352,7 +352,7 @@ describe("FileRestrictionError", () => {
 	describe("getFullModeDetails", () => {
 		beforeEach(() => {
 			jest.clearAllMocks()
-			;(addCustomInstructions as jest.Mock).mockResolvedValue("Combined instructions")
+				; (addCustomInstructions as jest.Mock).mockResolvedValue("Combined instructions")
 		})
 
 		it("returns base mode when no overrides exist", async () => {
@@ -361,7 +361,7 @@ describe("FileRestrictionError", () => {
 				slug: "debug",
 				name: "Debug",
 				roleDefinition:
-					"You are Roo, an expert software debugger specializing in systematic problem diagnosis and resolution.",
+					"You are Feb, an expert software debugger specializing in systematic problem diagnosis and resolution.",
 			})
 		})
 

@@ -38,8 +38,8 @@ describe("OpenRouterHandler", () => {
 			baseURL: "https://openrouter.ai/api/v1",
 			apiKey: mockOptions.openRouterApiKey,
 			defaultHeaders: {
-				"HTTP-Referer": "https://github.com/RooVetGit/Roo-Cline",
-				"X-Title": "Roo Code",
+				"HTTP-Referer": "https://github.com/FebVetGit/Feb-Cline",
+				"X-Title": "Feb Code",
 			},
 		})
 	})
@@ -127,9 +127,9 @@ describe("OpenRouterHandler", () => {
 
 		// Mock OpenAI chat.completions.create
 		const mockCreate = jest.fn().mockResolvedValue(mockStream)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
 
 		const systemPrompt = "test system prompt"
 		const messages: Anthropic.Messages.MessageParam[] = [{ role: "user" as const, content: "test message" }]
@@ -189,10 +189,10 @@ describe("OpenRouterHandler", () => {
 		}
 
 		const mockCreate = jest.fn().mockResolvedValue(mockStream)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
-		;(axios.get as jest.Mock).mockResolvedValue({ data: { data: {} } })
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
+			; (axios.get as jest.Mock).mockResolvedValue({ data: { data: {} } })
 
 		await handler.createMessage("test", []).next()
 
@@ -224,10 +224,10 @@ describe("OpenRouterHandler", () => {
 		}
 
 		const mockCreate = jest.fn().mockResolvedValue(mockStream)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
-		;(axios.get as jest.Mock).mockResolvedValue({ data: { data: {} } })
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
+			; (axios.get as jest.Mock).mockResolvedValue({ data: { data: {} } })
 
 		const messages: Anthropic.Messages.MessageParam[] = [
 			{ role: "user", content: "message 1" },
@@ -267,9 +267,9 @@ describe("OpenRouterHandler", () => {
 		}
 
 		const mockCreate = jest.fn().mockResolvedValue(mockStream)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
 
 		const generator = handler.createMessage("test", [])
 		await expect(generator.next()).rejects.toThrow("OpenRouter API Error 500: API Error")
@@ -280,9 +280,9 @@ describe("OpenRouterHandler", () => {
 		const mockResponse = { choices: [{ message: { content: "test completion" } }] }
 
 		const mockCreate = jest.fn().mockResolvedValue(mockResponse)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
 
 		const result = await handler.completePrompt("test prompt")
 
@@ -308,9 +308,9 @@ describe("OpenRouterHandler", () => {
 		}
 
 		const mockCreate = jest.fn().mockResolvedValue(mockError)
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
 
 		await expect(handler.completePrompt("test prompt")).rejects.toThrow("OpenRouter API Error 500: API Error")
 	})
@@ -318,9 +318,9 @@ describe("OpenRouterHandler", () => {
 	test("completePrompt handles unexpected errors", async () => {
 		const handler = new OpenRouterHandler(mockOptions)
 		const mockCreate = jest.fn().mockRejectedValue(new Error("Unexpected error"))
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
-			completions: { create: mockCreate },
-		} as any
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).prototype.chat = {
+				completions: { create: mockCreate },
+			} as any
 
 		await expect(handler.completePrompt("test prompt")).rejects.toThrow("Unexpected error")
 	})

@@ -22,6 +22,8 @@ import { RequestyHandler } from "./providers/requesty"
 import { HumanRelayHandler } from "./providers/human-relay"
 import { FakeAIHandler } from "./providers/fake-ai"
 import { XAIHandler } from "./providers/xai"
+import { PerplexityHandler } from "./providers/perplexity";
+import { CloudGroqHandler } from "./providers/cloudgroq";
 
 export interface SingleCompletionHandler {
 	completePrompt(prompt: string): Promise<string>
@@ -81,6 +83,10 @@ export function buildApiHandler(configuration: ApiConfiguration): ApiHandler {
 			return new FakeAIHandler(options)
 		case "xai":
 			return new XAIHandler(options)
+		case "perplexity":
+			return new PerplexityHandler(options);
+		case "cloudgroq":
+			return new CloudGroqHandler(options);
 		default:
 			return new AnthropicHandler(options)
 	}

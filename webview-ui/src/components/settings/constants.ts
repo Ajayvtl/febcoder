@@ -9,6 +9,8 @@ import {
 	openAiNativeModels,
 	vertexModels,
 	xaiModels,
+	perplexityModels,
+	cloudGroqModels,
 	REASONING_MODELS,
 } from "../../../../src/shared/api"
 
@@ -23,6 +25,8 @@ export const MODELS_BY_PROVIDER: Partial<Record<ApiProvider, Record<string, Mode
 	"openai-native": openAiNativeModels,
 	vertex: vertexModels,
 	xai: xaiModels,
+	perplexity: perplexityModels,
+	cloudgroq: cloudGroqModels,
 }
 
 export const PROVIDERS = [
@@ -43,6 +47,8 @@ export const PROVIDERS = [
 	{ value: "requesty", label: "Requesty" },
 	{ value: "human-relay", label: "Human Relay" },
 	{ value: "xai", label: "xAI" },
+	{ value: "perplexity", label: "Perplexity" },
+	{ value: "cloudgroq", label: "CloudGroq" },
 ].sort((a, b) => a.label.localeCompare(b.label))
 
 export const VERTEX_REGIONS = [

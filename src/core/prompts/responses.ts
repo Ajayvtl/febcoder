@@ -1,7 +1,7 @@
 import { Anthropic } from "@anthropic-ai/sdk"
 import * as path from "path"
 import * as diff from "diff"
-import { RooIgnoreController, LOCK_TEXT_SYMBOL } from "../ignore/RooIgnoreController"
+import { FebIgnoreController, LOCK_TEXT_SYMBOL } from "../ignore/FebIgnoreController"
 
 export const formatResponse = {
 	toolDenied: () => `The user denied this operation.`,
@@ -60,8 +60,8 @@ Otherwise, if you have not completed the task and do not need additional informa
 		absolutePath: string,
 		files: string[],
 		didHitLimit: boolean,
-		rooIgnoreController: RooIgnoreController | undefined,
-		showRooIgnoredFiles: boolean,
+		rooIgnoreController: FebIgnoreController | undefined,
+		showFebIgnoredFiles: boolean,
 	): string => {
 		const sorted = files
 			.map((file) => {
@@ -104,7 +104,7 @@ Otherwise, if you have not completed the task and do not need additional informa
 
 				if (isIgnored) {
 					// If file is ignored and we're not showing ignored files, skip it
-					if (!showRooIgnoredFiles) {
+					if (!showFebIgnoredFiles) {
 						continue
 					}
 					// Otherwise, mark it with a lock symbol
@@ -138,14 +138,14 @@ Otherwise, if you have not completed the task and do not need additional informa
 const formatImagesIntoBlocks = (images?: string[]): Anthropic.ImageBlockParam[] => {
 	return images
 		? images.map((dataUrl) => {
-				// data:image/png;base64,base64string
-				const [rest, base64] = dataUrl.split(",")
-				const mimeType = rest.split(":")[1].split(";")[0]
-				return {
-					type: "image",
-					source: { type: "base64", media_type: mimeType, data: base64 },
-				} as Anthropic.ImageBlockParam
-			})
+			// data:image/png;base64,base64string
+			const [rest, base64] = dataUrl.split(",")
+			const mimeType = rest.split(":")[1].split(";")[0]
+			return {
+				type: "image",
+				source: { type: "base64", media_type: mimeType, data: base64 },
+			} as Anthropic.ImageBlockParam
+		})
 		: []
 }
 

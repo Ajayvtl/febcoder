@@ -1,13 +1,13 @@
-# Roo Code API
+# Feb Code API
 
-The Roo Code extension exposes an API that can be used by other extensions. To use this API in your extension:
+The Feb Code extension exposes an API that can be used by other extensions. To use this API in your extension:
 
 1. Copy `src/extension-api/roo-code.d.ts` to your extension's source directory.
 2. Include `roo-code.d.ts` in your extension's compilation.
 3. Get access to the API with the following code:
 
 ```typescript
-const extension = vscode.extensions.getExtension<RooCodeAPI>("rooveterinaryinc.roo-cline")
+const extension = vscode.extensions.getExtension<FebCodeAPI>("rooveterinaryinc.roo-cline")
 
 if (!extension?.isActive) {
 	throw new Error("Extension is not activated")
@@ -20,7 +20,7 @@ if (!api) {
 }
 
 // Start a new task with an initial message.
-await api.startNewTask("Hello, Roo Code API! Let's make a new project...")
+await api.startNewTask("Hello, Feb Code API! Let's make a new project...")
 
 // Start a new task with an initial message and images.
 await api.startNewTask("Use this design language", ["data:image/webp;base64,..."])

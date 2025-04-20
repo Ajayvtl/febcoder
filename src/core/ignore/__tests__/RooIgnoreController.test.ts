@@ -1,6 +1,6 @@
-// npx jest src/core/ignore/__tests__/RooIgnoreController.test.ts
+// npx jest src/core/ignore/__tests__/FebIgnoreController.test.ts
 
-import { RooIgnoreController, LOCK_TEXT_SYMBOL } from "../RooIgnoreController"
+import { FebIgnoreController, LOCK_TEXT_SYMBOL } from "../FebIgnoreController"
 import * as vscode from "vscode"
 import * as path from "path"
 import * as fs from "fs/promises"
@@ -38,9 +38,9 @@ jest.mock("vscode", () => {
 	}
 })
 
-describe("RooIgnoreController", () => {
+describe("FebIgnoreController", () => {
 	const TEST_CWD = "/test/path"
-	let controller: RooIgnoreController
+	let controller: FebIgnoreController
 	let mockFileExists: jest.MockedFunction<typeof fileExistsAtPath>
 	let mockReadFile: jest.MockedFunction<typeof fs.readFile>
 	let mockWatcher: any
@@ -65,7 +65,7 @@ describe("RooIgnoreController", () => {
 		mockReadFile = fs.readFile as jest.MockedFunction<typeof fs.readFile>
 
 		// Create controller
-		controller = new RooIgnoreController(TEST_CWD)
+		controller = new FebIgnoreController(TEST_CWD)
 	})
 
 	describe("initialization", () => {
@@ -207,7 +207,7 @@ describe("RooIgnoreController", () => {
 		it("should allow all access when no .rooignore content", async () => {
 			// Create a new controller with no .rooignore
 			mockFileExists.mockResolvedValue(false)
-			const emptyController = new RooIgnoreController(TEST_CWD)
+			const emptyController = new FebIgnoreController(TEST_CWD)
 			await emptyController.initialize()
 
 			// All paths should be allowed
@@ -279,7 +279,7 @@ describe("RooIgnoreController", () => {
 		it("should allow all commands when no .rooignore exists", async () => {
 			// Create a new controller with no .rooignore
 			mockFileExists.mockResolvedValue(false)
-			const emptyController = new RooIgnoreController(TEST_CWD)
+			const emptyController = new FebIgnoreController(TEST_CWD)
 			await emptyController.initialize()
 
 			// All commands should be allowed
@@ -423,7 +423,7 @@ describe("RooIgnoreController", () => {
 			mockFileExists.mockResolvedValue(false) // Initially no file exists
 
 			// Create and initialize controller with no .rooignore
-			controller = new RooIgnoreController(TEST_CWD)
+			controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Initial state check

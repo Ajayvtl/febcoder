@@ -19,7 +19,7 @@ import { getApiMetrics } from "../../../../src/shared/getApiMetrics"
 import { useExtensionState } from "../../context/ExtensionStateContext"
 import { vscode } from "../../utils/vscode"
 import HistoryPreview from "../history/HistoryPreview"
-import RooHero from "../welcome/RooHero"
+import FebHero from "../welcome/FebHero"
 import { normalizeApiConfiguration } from "../settings/ApiOptions"
 import Announcement from "./Announcement"
 import BrowserSessionRow from "./BrowserSessionRow"
@@ -1225,7 +1225,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 					{telemetrySetting === "unset" && <TelemetryBanner />}
 					{showAnnouncement && <Announcement version={version} hideAnnouncement={hideAnnouncement} />}
 
-					<RooHero />
+					<FebHero />
 					{taskHistory.length > 0 && <HistoryPreview showHistoryView={showHistoryView} />}
 				</div>
 			)}
@@ -1336,7 +1336,7 @@ const ChatViewComponent: React.ForwardRefRenderFunction<ChatViewRef, ChatViewPro
 																: primaryButtonText === t("chat:proceedAnyways.title")
 																	? t("chat:proceedAnyways.tooltip")
 																	: primaryButtonText ===
-																		  t("chat:proceedWhileRunning.title")
+																		t("chat:proceedWhileRunning.title")
 																		? t("chat:proceedWhileRunning.tooltip")
 																		: undefined
 									}

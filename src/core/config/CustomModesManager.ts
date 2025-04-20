@@ -48,13 +48,13 @@ export class CustomModesManager {
 		}
 	}
 
-	private async getWorkspaceRoomodes(): Promise<string | undefined> {
+	private async getWorkspaceFebmodes(): Promise<string | undefined> {
 		const workspaceFolders = vscode.workspace.workspaceFolders
 		if (!workspaceFolders || workspaceFolders.length === 0) {
 			return undefined
 		}
-		const workspaceRoot = getWorkspacePath()
-		const roomodesPath = path.join(workspaceRoot, ROOMODES_FILENAME)
+		const workspaceFebt = getWorkspacePath()
+		const roomodesPath = path.join(workspaceFebt, ROOMODES_FILENAME)
 		const exists = await fileExistsAtPath(roomodesPath)
 		return exists ? roomodesPath : undefined
 	}
@@ -69,8 +69,8 @@ export class CustomModesManager {
 			}
 
 			// Determine source based on file path
-			const isRoomodes = filePath.endsWith(ROOMODES_FILENAME)
-			const source = isRoomodes ? ("project" as const) : ("global" as const)
+			const isFebmodes = filePath.endsWith(ROOMODES_FILENAME)
+			const source = isFebmodes ? ("project" as const) : ("global" as const)
 
 			// Add source to each mode
 			return result.data.customModes.map((mode) => ({
@@ -153,7 +153,7 @@ export class CustomModesManager {
 					}
 
 					// Get modes from .roomodes if it exists (takes precedence)
-					const roomodesPath = await this.getWorkspaceRoomodes()
+					const roomodesPath = await this.getWorkspaceFebmodes()
 					const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
 
 					// Merge modes from both sources (.roomodes takes precedence)
@@ -165,7 +165,7 @@ export class CustomModesManager {
 		)
 
 		// Watch .roomodes file if it exists
-		const roomodesPath = await this.getWorkspaceRoomodes()
+		const roomodesPath = await this.getWorkspaceFebmodes()
 		if (roomodesPath) {
 			this.disposables.push(
 				vscode.workspace.onDidSaveTextDocument(async (document) => {
@@ -188,7 +188,7 @@ export class CustomModesManager {
 		const settingsModes = await this.loadModesFromFile(settingsPath)
 
 		// Get modes from .roomodes if it exists
-		const roomodesPath = await this.getWorkspaceRoomodes()
+		const roomodesPath = await this.getWorkspaceFebmodes()
 		const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
 
 		// Create maps to store modes by source
@@ -229,12 +229,12 @@ export class CustomModesManager {
 					logger.error("Failed to update project mode: No workspace folder found", { slug })
 					throw new Error("No workspace folder found for project-specific mode")
 				}
-				const workspaceRoot = getWorkspacePath()
-				targetPath = path.join(workspaceRoot, ROOMODES_FILENAME)
+				const workspaceFebt = getWorkspacePath()
+				targetPath = path.join(workspaceFebt, ROOMODES_FILENAME)
 				const exists = await fileExistsAtPath(targetPath)
 				logger.info(`${exists ? "Updating" : "Creating"} project mode in ${ROOMODES_FILENAME}`, {
 					slug,
-					workspace: workspaceRoot,
+					workspace: workspaceFebt,
 				})
 			} else {
 				targetPath = await this.getCustomModesFilePath()
@@ -283,7 +283,7 @@ export class CustomModesManager {
 
 	private async refreshMergedState(): Promise<void> {
 		const settingsPath = await this.getCustomModesFilePath()
-		const roomodesPath = await this.getWorkspaceRoomodes()
+		const roomodesPath = await this.getWorkspaceFebmodes()
 
 		const settingsModes = await this.loadModesFromFile(settingsPath)
 		const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []
@@ -296,7 +296,7 @@ export class CustomModesManager {
 	async deleteCustomMode(slug: string): Promise<void> {
 		try {
 			const settingsPath = await this.getCustomModesFilePath()
-			const roomodesPath = await this.getWorkspaceRoomodes()
+			const roomodesPath = await this.getWorkspaceFebmodes()
 
 			const settingsModes = await this.loadModesFromFile(settingsPath)
 			const roomodesModes = roomodesPath ? await this.loadModesFromFile(roomodesPath) : []

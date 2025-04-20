@@ -12,27 +12,27 @@
 </div>
 <br>
 <div align="center">
-  <h2>Treten Sie der Roo Code Community bei</h2>
+  <h2>Treten Sie der Feb Code Community bei</h2>
   <p>Vernetzen Sie sich mit Entwicklern, tragen Sie Ideen bei und bleiben Sie mit den neuesten KI-gestützten Coding-Tools auf dem Laufenden.</p>
   
   <a href="https://discord.gg/roocode" target="_blank"><img src="https://img.shields.io/badge/Discord%20beitreten-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord beitreten"></a>
-  <a href="https://www.reddit.com/r/RooCode/" target="_blank"><img src="https://img.shields.io/badge/Reddit%20beitreten-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit beitreten"></a>
+  <a href="https://www.reddit.com/r/FebCode/" target="_blank"><img src="https://img.shields.io/badge/Reddit%20beitreten-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit beitreten"></a>
   
 </div>
 <br>
 <br>
 
 <div align="center">
-<h1>Roo Code (früher Roo Cline)</h1>
+<h1>Feb Code (früher Feb Cline)</h1>
 
-<a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline" target="_blank"><img src="https://img.shields.io/badge/Download%20im%20VS%20Marketplace-blue?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Download im VS Marketplace"></a>
-<a href="https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><img src="https://img.shields.io/badge/Funktionsanfragen-yellow?style=for-the-badge" alt="Funktionsanfragen"></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline&ssr=false#review-details" target="_blank"><img src="https://img.shields.io/badge/Bewerten%20%26%20Rezensieren-green?style=for-the-badge" alt="Bewerten & Rezensieren"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=FebVeterinaryInc.roo-cline" target="_blank"><img src="https://img.shields.io/badge/Download%20im%20VS%20Marketplace-blue?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Download im VS Marketplace"></a>
+<a href="https://github.com/FebVetGit/Feb-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><img src="https://img.shields.io/badge/Funktionsanfragen-yellow?style=for-the-badge" alt="Funktionsanfragen"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=FebVeterinaryInc.roo-cline&ssr=false#review-details" target="_blank"><img src="https://img.shields.io/badge/Bewerten%20%26%20Rezensieren-green?style=for-the-badge" alt="Bewerten & Rezensieren"></a>
 <a href="https://docs.roocode.com" target="_blank"><img src="https://img.shields.io/badge/Dokumentation-6B46C1?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Dokumentation"></a>
 
 </div>
 
-**Roo Code** ist ein KI-gesteuerter **autonomer Coding-Agent**, der in Ihrem Editor lebt. Er kann:
+**Feb Code** ist ein KI-gesteuerter **autonomer Coding-Agent**, der in Ihrem Editor lebt. Er kann:
 
 - In natürlicher Sprache kommunizieren
 - Dateien direkt in Ihrem Workspace lesen und schreiben
@@ -41,15 +41,15 @@
 - Mit jeder OpenAI-kompatiblen oder benutzerdefinierten API/Modell integrieren
 - Seine "Persönlichkeit" und Fähigkeiten durch **Benutzerdefinierte Modi** anpassen
 
-Ob Sie einen flexiblen Coding-Partner, einen Systemarchitekten oder spezialisierte Rollen wie einen QA-Ingenieur oder Produktmanager suchen, Roo Code kann Ihnen helfen, Software effizienter zu entwickeln.
+Ob Sie einen flexiblen Coding-Partner, einen Systemarchitekten oder spezialisierte Rollen wie einen QA-Ingenieur oder Produktmanager suchen, Feb Code kann Ihnen helfen, Software effizienter zu entwickeln.
 
 Sehen Sie sich das [CHANGELOG](../CHANGELOG.md) für detaillierte Updates und Fehlerbehebungen an.
 
 ---
 
-## 🎉 Roo Code 3.13 veröffentlicht
+## 🎉 Feb Code 3.13 veröffentlicht
 
-Roo Code 3.13 bringt neue Funktionen und Verbesserungen basierend auf deinem Feedback!
+Feb Code 3.13 bringt neue Funktionen und Verbesserungen basierend auf deinem Feedback!
 
 - **Gemini 2.5 Flash Thinking** - Du kannst jetzt die Thinking-Variante von Gemini 2.5 Flash verwenden und ein Thinking-Token-Budget festlegen.
 - **UI-Verbesserungen** - Der Aufgaben-Header, die Chat-Ansicht, die Verlaufsvorschau und die Willkommensansicht wurden visuell verbessert.
@@ -57,7 +57,7 @@ Roo Code 3.13 bringt neue Funktionen und Verbesserungen basierend auf deinem Fee
 
 ---
 
-## Was kann Roo Code tun?
+## Was kann Feb Code tun?
 
 - 🚀 **Code generieren** aus natürlichsprachlichen Beschreibungen
 - 🔧 **Refaktorieren & Debuggen** von bestehendem Code
@@ -68,7 +68,7 @@ Roo Code 3.13 bringt neue Funktionen und Verbesserungen basierend auf deinem Fee
 
 ## Schnellstart
 
-1. [Roo Code installieren](https://docs.roocode.com/getting-started/installing)
+1. [Feb Code installieren](https://docs.roocode.com/getting-started/installing)
 2. [Ihren KI-Provider verbinden](https://docs.roocode.com/getting-started/connecting-api-provider)
 3. [Ihre erste Aufgabe ausprobieren](https://docs.roocode.com/getting-started/your-first-task)
 
@@ -76,7 +76,7 @@ Roo Code 3.13 bringt neue Funktionen und Verbesserungen basierend auf deinem Fee
 
 ### Mehrere Modi
 
-Roo Code passt sich Ihren Bedürfnissen mit spezialisierten [Modi](https://docs.roocode.com/basic-usage/using-modes) an:
+Feb Code passt sich Ihren Bedürfnissen mit spezialisierten [Modi](https://docs.roocode.com/basic-usage/using-modes) an:
 
 - **Code-Modus:** Für allgemeine Coding-Aufgaben
 - **Architekten-Modus:** Für Planung und technische Führung
@@ -86,18 +86,18 @@ Roo Code passt sich Ihren Bedürfnissen mit spezialisierten [Modi](https://docs.
 
 ### Intelligente Tools
 
-Roo Code kommt mit leistungsstarken [Tools](https://docs.roocode.com/basic-usage/how-tools-work), die können:
+Feb Code kommt mit leistungsstarken [Tools](https://docs.roocode.com/basic-usage/how-tools-work), die können:
 
 - Dateien in Ihrem Projekt lesen und schreiben
 - Befehle in Ihrem VS Code-Terminal ausführen
 - Einen Webbrowser steuern
 - Externe Tools über [MCP (Model Context Protocol)](https://docs.roocode.com/advanced-usage/mcp) nutzen
 
-MCP erweitert die Fähigkeiten von Roo Code, indem es Ihnen ermöglicht, unbegrenzte benutzerdefinierte Tools hinzuzufügen. Integrieren Sie externe APIs, verbinden Sie sich mit Datenbanken oder erstellen Sie spezialisierte Entwicklungstools - MCP bietet das Framework, um die Funktionalität von Roo Code zu erweitern und Ihre spezifischen Bedürfnisse zu erfüllen.
+MCP erweitert die Fähigkeiten von Feb Code, indem es Ihnen ermöglicht, unbegrenzte benutzerdefinierte Tools hinzuzufügen. Integrieren Sie externe APIs, verbinden Sie sich mit Datenbanken oder erstellen Sie spezialisierte Entwicklungstools - MCP bietet das Framework, um die Funktionalität von Feb Code zu erweitern und Ihre spezifischen Bedürfnisse zu erfüllen.
 
 ### Anpassung
 
-Passen Sie Roo Code nach Ihren Wünschen an mit:
+Passen Sie Feb Code nach Ihren Wünschen an mit:
 
 - [Benutzerdefinierten Anweisungen](https://docs.roocode.com/advanced-usage/custom-instructions) für personalisiertes Verhalten
 - [Benutzerdefinierten Modi](https://docs.roocode.com/advanced-usage/custom-modes) für spezialisierte Aufgaben
@@ -115,8 +115,8 @@ Passen Sie Roo Code nach Ihren Wünschen an mit:
 ### Community
 
 - **Discord:** [Treten Sie unserem Discord-Server bei](https://discord.gg/roocode) für Echtzeit-Hilfe und Diskussionen
-- **Reddit:** [Besuchen Sie unser Subreddit](https://www.reddit.com/r/RooCode), um Erfahrungen und Tipps zu teilen
-- **GitHub:** [Probleme melden](https://github.com/RooVetGit/Roo-Code/issues) oder [Funktionen anfragen](https://github.com/RooVetGit/Roo-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)
+- **Reddit:** [Besuchen Sie unser Subreddit](https://www.reddit.com/r/FebCode), um Erfahrungen und Tipps zu teilen
+- **GitHub:** [Probleme melden](https://github.com/FebVetGit/Feb-Code/issues) oder [Funktionen anfragen](https://github.com/FebVetGit/Feb-Code/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop)
 
 ---
 
@@ -125,7 +125,7 @@ Passen Sie Roo Code nach Ihren Wünschen an mit:
 1. **Klonen** Sie das Repository:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
+git clone https://github.com/FebVetGit/Feb-Code.git
 ```
 
 2. **Abhängigkeiten installieren**:
@@ -141,7 +141,7 @@ npm run dev
 ```
 
 4. **Debugging**:
-   Drücken Sie `F5` (oder **Ausführen** → **Debugging starten**) in VSCode, um eine neue Sitzung mit geladenem Roo Code zu öffnen.
+   Drücken Sie `F5` (oder **Ausführen** → **Debugging starten**) in VSCode, um eine neue Sitzung mit geladenem Feb Code zu öffnen.
 
 Änderungen an der Webview erscheinen sofort. Änderungen an der Kern-Erweiterung erfordern einen Neustart des Erweiterungs-Hosts.
 
@@ -163,7 +163,7 @@ Wir verwenden [changesets](https://github.com/changesets/changesets) für Versio
 
 ## Haftungsausschluss
 
-**Bitte beachten Sie**, dass Roo Code, Inc **keine** Zusicherungen oder Garantien bezüglich jeglichen Codes, Modellen oder anderen Tools gibt, die in Verbindung mit Roo Code bereitgestellt oder verfügbar gemacht werden, jeglichen zugehörigen Drittanbieter-Tools oder resultierenden Outputs. Sie übernehmen **alle Risiken** im Zusammenhang mit der Nutzung solcher Tools oder Outputs; solche Tools werden auf einer **"WIE BESEHEN"** und **"WIE VERFÜGBAR"** Basis bereitgestellt. Solche Risiken können, ohne Einschränkung, Verletzung geistigen Eigentums, Cyber-Schwachstellen oder -Angriffe, Voreingenommenheit, Ungenauigkeiten, Fehler, Mängel, Viren, Ausfallzeiten, Eigentumsverlust oder -schäden und/oder Personenschäden umfassen. Sie sind allein verantwortlich für Ihre Nutzung solcher Tools oder Outputs (einschließlich, ohne Einschränkung, deren Rechtmäßigkeit, Angemessenheit und Ergebnisse).
+**Bitte beachten Sie**, dass Feb Code, Inc **keine** Zusicherungen oder Garantien bezüglich jeglichen Codes, Modellen oder anderen Tools gibt, die in Verbindung mit Feb Code bereitgestellt oder verfügbar gemacht werden, jeglichen zugehörigen Drittanbieter-Tools oder resultierenden Outputs. Sie übernehmen **alle Risiken** im Zusammenhang mit der Nutzung solcher Tools oder Outputs; solche Tools werden auf einer **"WIE BESEHEN"** und **"WIE VERFÜGBAR"** Basis bereitgestellt. Solche Risiken können, ohne Einschränkung, Verletzung geistigen Eigentums, Cyber-Schwachstellen oder -Angriffe, Voreingenommenheit, Ungenauigkeiten, Fehler, Mängel, Viren, Ausfallzeiten, Eigentumsverlust oder -schäden und/oder Personenschäden umfassen. Sie sind allein verantwortlich für Ihre Nutzung solcher Tools oder Outputs (einschließlich, ohne Einschränkung, deren Rechtmäßigkeit, Angemessenheit und Ergebnisse).
 
 ---
 
@@ -175,12 +175,12 @@ Wir lieben Community-Beiträge! Beginnen Sie mit dem Lesen unserer [CONTRIBUTING
 
 ## Mitwirkende
 
-Danke an alle unsere Mitwirkenden, die geholfen haben, Roo Code zu verbessern!
+Danke an alle unsere Mitwirkenden, die geholfen haben, Feb Code zu verbessern!
 
 <!-- START CONTRIBUTORS SECTION - AUTO-GENERATED, DO NOT EDIT MANUALLY -->
 |<a href="https://github.com/mrubens"><img src="https://avatars.githubusercontent.com/u/2600?v=4" width="100" height="100" alt="mrubens"/><br /><sub><b>mrubens</b></sub></a>|<a href="https://github.com/saoudrizwan"><img src="https://avatars.githubusercontent.com/u/7799382?v=4" width="100" height="100" alt="saoudrizwan"/><br /><sub><b>saoudrizwan</b></sub></a>|<a href="https://github.com/cte"><img src="https://avatars.githubusercontent.com/u/16332?v=4" width="100" height="100" alt="cte"/><br /><sub><b>cte</b></sub></a>|<a href="https://github.com/samhvw8"><img src="https://avatars.githubusercontent.com/u/12538214?v=4" width="100" height="100" alt="samhvw8"/><br /><sub><b>samhvw8</b></sub></a>|<a href="https://github.com/daniel-lxs"><img src="https://avatars.githubusercontent.com/u/57051444?v=4" width="100" height="100" alt="daniel-lxs"/><br /><sub><b>daniel-lxs</b></sub></a>|<a href="https://github.com/a8trejo"><img src="https://avatars.githubusercontent.com/u/62401433?v=4" width="100" height="100" alt="a8trejo"/><br /><sub><b>a8trejo</b></sub></a>|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|<a href="https://github.com/ColemanRoo"><img src="https://avatars.githubusercontent.com/u/117104599?v=4" width="100" height="100" alt="ColemanRoo"/><br /><sub><b>ColemanRoo</b></sub></a>|<a href="https://github.com/stea9499"><img src="https://avatars.githubusercontent.com/u/4163795?v=4" width="100" height="100" alt="stea9499"/><br /><sub><b>stea9499</b></sub></a>|<a href="https://github.com/joemanley201"><img src="https://avatars.githubusercontent.com/u/8299960?v=4" width="100" height="100" alt="joemanley201"/><br /><sub><b>joemanley201</b></sub></a>|<a href="https://github.com/System233"><img src="https://avatars.githubusercontent.com/u/20336040?v=4" width="100" height="100" alt="System233"/><br /><sub><b>System233</b></sub></a>|<a href="https://github.com/hannesrudolph"><img src="https://avatars.githubusercontent.com/u/49103247?v=4" width="100" height="100" alt="hannesrudolph"/><br /><sub><b>hannesrudolph</b></sub></a>|<a href="https://github.com/nissa-seru"><img src="https://avatars.githubusercontent.com/u/119150866?v=4" width="100" height="100" alt="nissa-seru"/><br /><sub><b>nissa-seru</b></sub></a>|
+|<a href="https://github.com/ColemanFeb"><img src="https://avatars.githubusercontent.com/u/117104599?v=4" width="100" height="100" alt="ColemanFeb"/><br /><sub><b>ColemanFeb</b></sub></a>|<a href="https://github.com/stea9499"><img src="https://avatars.githubusercontent.com/u/4163795?v=4" width="100" height="100" alt="stea9499"/><br /><sub><b>stea9499</b></sub></a>|<a href="https://github.com/joemanley201"><img src="https://avatars.githubusercontent.com/u/8299960?v=4" width="100" height="100" alt="joemanley201"/><br /><sub><b>joemanley201</b></sub></a>|<a href="https://github.com/System233"><img src="https://avatars.githubusercontent.com/u/20336040?v=4" width="100" height="100" alt="System233"/><br /><sub><b>System233</b></sub></a>|<a href="https://github.com/hannesrudolph"><img src="https://avatars.githubusercontent.com/u/49103247?v=4" width="100" height="100" alt="hannesrudolph"/><br /><sub><b>hannesrudolph</b></sub></a>|<a href="https://github.com/nissa-seru"><img src="https://avatars.githubusercontent.com/u/119150866?v=4" width="100" height="100" alt="nissa-seru"/><br /><sub><b>nissa-seru</b></sub></a>|
 |<a href="https://github.com/jquanton"><img src="https://avatars.githubusercontent.com/u/88576563?v=4" width="100" height="100" alt="jquanton"/><br /><sub><b>jquanton</b></sub></a>|<a href="https://github.com/KJ7LNW"><img src="https://avatars.githubusercontent.com/u/93454819?v=4" width="100" height="100" alt="KJ7LNW"/><br /><sub><b>KJ7LNW</b></sub></a>|<a href="https://github.com/NyxJae"><img src="https://avatars.githubusercontent.com/u/52313587?v=4" width="100" height="100" alt="NyxJae"/><br /><sub><b>NyxJae</b></sub></a>|<a href="https://github.com/MuriloFP"><img src="https://avatars.githubusercontent.com/u/50873657?v=4" width="100" height="100" alt="MuriloFP"/><br /><sub><b>MuriloFP</b></sub></a>|<a href="https://github.com/d-oit"><img src="https://avatars.githubusercontent.com/u/6849456?v=4" width="100" height="100" alt="d-oit"/><br /><sub><b>d-oit</b></sub></a>|<a href="https://github.com/punkpeye"><img src="https://avatars.githubusercontent.com/u/108313943?v=4" width="100" height="100" alt="punkpeye"/><br /><sub><b>punkpeye</b></sub></a>|
 |<a href="https://github.com/Smartsheet-JB-Brown"><img src="https://avatars.githubusercontent.com/u/171734120?v=4" width="100" height="100" alt="Smartsheet-JB-Brown"/><br /><sub><b>Smartsheet-JB-Brown</b></sub></a>|<a href="https://github.com/monotykamary"><img src="https://avatars.githubusercontent.com/u/1130103?v=4" width="100" height="100" alt="monotykamary"/><br /><sub><b>monotykamary</b></sub></a>|<a href="https://github.com/feifei325"><img src="https://avatars.githubusercontent.com/u/46489071?v=4" width="100" height="100" alt="feifei325"/><br /><sub><b>feifei325</b></sub></a>|<a href="https://github.com/cannuri"><img src="https://avatars.githubusercontent.com/u/91494156?v=4" width="100" height="100" alt="cannuri"/><br /><sub><b>cannuri</b></sub></a>|<a href="https://github.com/lloydchang"><img src="https://avatars.githubusercontent.com/u/1329685?v=4" width="100" height="100" alt="lloydchang"/><br /><sub><b>lloydchang</b></sub></a>|<a href="https://github.com/vigneshsubbiah16"><img src="https://avatars.githubusercontent.com/u/51325334?v=4" width="100" height="100" alt="vigneshsubbiah16"/><br /><sub><b>vigneshsubbiah16</b></sub></a>|
 |<a href="https://github.com/wkordalski"><img src="https://avatars.githubusercontent.com/u/3035587?v=4" width="100" height="100" alt="wkordalski"/><br /><sub><b>wkordalski</b></sub></a>|<a href="https://github.com/Szpadel"><img src="https://avatars.githubusercontent.com/u/1857251?v=4" width="100" height="100" alt="Szpadel"/><br /><sub><b>Szpadel</b></sub></a>|<a href="https://github.com/diarmidmackenzie"><img src="https://avatars.githubusercontent.com/u/16045703?v=4" width="100" height="100" alt="diarmidmackenzie"/><br /><sub><b>diarmidmackenzie</b></sub></a>|<a href="https://github.com/psv2522"><img src="https://avatars.githubusercontent.com/u/87223770?v=4" width="100" height="100" alt="psv2522"/><br /><sub><b>psv2522</b></sub></a>|<a href="https://github.com/Premshay"><img src="https://avatars.githubusercontent.com/u/28099628?v=4" width="100" height="100" alt="Premshay"/><br /><sub><b>Premshay</b></sub></a>|<a href="https://github.com/qdaxb"><img src="https://avatars.githubusercontent.com/u/4157870?v=4" width="100" height="100" alt="qdaxb"/><br /><sub><b>qdaxb</b></sub></a>|
@@ -206,8 +206,8 @@ Danke an alle unsere Mitwirkenden, die geholfen haben, Roo Code zu verbessern!
 
 ## Lizenz
 
-[Apache 2.0 © 2025 Roo Code, Inc.](../LICENSE)
+[Apache 2.0 © 2025 Feb Code, Inc.](../LICENSE)
 
 ---
 
-**Genießen Sie Roo Code!** Ob Sie ihn an der kurzen Leine halten oder autonom agieren lassen, wir können es kaum erwarten zu sehen, was Sie bauen. Wenn Sie Fragen oder Funktionsideen haben, schauen Sie in unserer [Reddit-Community](https://www.reddit.com/r/RooCode/) oder auf [Discord](https://discord.gg/roocode) vorbei. Frohes Coding!
+**Genießen Sie Feb Code!** Ob Sie ihn an der kurzen Leine halten oder autonom agieren lassen, wir können es kaum erwarten zu sehen, was Sie bauen. Wenn Sie Fragen oder Funktionsideen haben, schauen Sie in unserer [Reddit-Community](https://www.reddit.com/r/FebCode/) oder auf [Discord](https://discord.gg/roocode) vorbei. Frohes Coding!

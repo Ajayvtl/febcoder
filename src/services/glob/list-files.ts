@@ -66,8 +66,8 @@ async function handleSpecialDirectories(dirPath: string): Promise<[string[], boo
 
 	// Do not allow listing files in root directory
 	const root = process.platform === "win32" ? path.parse(absolutePath).root : "/"
-	const isRoot = arePathsEqual(absolutePath, root)
-	if (isRoot) {
+	const isFebt = arePathsEqual(absolutePath, root)
+	if (isFebt) {
 		return [[root], false]
 	}
 
@@ -85,8 +85,8 @@ async function handleSpecialDirectories(dirPath: string): Promise<[string[], boo
  * Get the path to the ripgrep binary
  */
 async function getRipgrepPath(): Promise<string> {
-	const vscodeAppRoot = vscode.env.appRoot
-	const rgPath = await getBinPath(vscodeAppRoot)
+	const vscodeAppFebt = vscode.env.appFebt
+	const rgPath = await getBinPath(vscodeAppFebt)
 
 	if (!rgPath) {
 		throw new Error("Could not find ripgrep binary")

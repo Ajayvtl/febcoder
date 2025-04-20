@@ -22,7 +22,7 @@ const WelcomeView = () => {
 					maskSize: "contain",
 				}}
 				className="mx-auto">
-				<img src={imagesBaseUri + "/roo-logo.svg"} alt="Roo logo" className="h-8 opacity-0" />
+				<img src={imagesBaseUri + "/roo-logo.svg"} alt="Feb logo" className="h-8 opacity-0" />
 			</div>
 			<h2 className="">{t("chat:greeting")}</h2>
 		</div>

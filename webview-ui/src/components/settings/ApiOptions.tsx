@@ -254,9 +254,9 @@ const ApiOptions = ({
 		() =>
 			MODELS_BY_PROVIDER[selectedProvider]
 				? Object.keys(MODELS_BY_PROVIDER[selectedProvider]).map((modelId) => ({
-						value: modelId,
-						label: modelId,
-					}))
+					value: modelId,
+					label: modelId,
+				}))
 				: [],
 		[selectedProvider],
 	)
@@ -547,22 +547,22 @@ const ApiOptions = ({
 					)}
 					{(apiConfiguration?.apiModelId?.startsWith("codestral-") ||
 						(!apiConfiguration?.apiModelId && mistralDefaultModelId.startsWith("codestral-"))) && (
-						<>
-							<VSCodeTextField
-								value={apiConfiguration?.mistralCodestralUrl || ""}
-								type="url"
-								onInput={handleInputChange("mistralCodestralUrl")}
-								placeholder="https://codestral.mistral.ai"
-								className="w-full">
-								<label className="block font-medium mb-1">
-									{t("settings:providers.codestralBaseUrl")}
-								</label>
-							</VSCodeTextField>
-							<div className="text-sm text-vscode-descriptionForeground -mt-2">
-								{t("settings:providers.codestralBaseUrlDesc")}
-							</div>
-						</>
-					)}
+							<>
+								<VSCodeTextField
+									value={apiConfiguration?.mistralCodestralUrl || ""}
+									type="url"
+									onInput={handleInputChange("mistralCodestralUrl")}
+									placeholder="https://codestral.mistral.ai"
+									className="w-full">
+									<label className="block font-medium mb-1">
+										{t("settings:providers.codestralBaseUrl")}
+									</label>
+								</VSCodeTextField>
+								<div className="text-sm text-vscode-descriptionForeground -mt-2">
+									{t("settings:providers.codestralBaseUrlDesc")}
+								</div>
+							</>
+						)}
 				</>
 			)}
 
@@ -1485,6 +1485,37 @@ const ApiOptions = ({
 							{t("settings:providers.getUnboundApiKey")}
 						</VSCodeButtonLink>
 					)}
+				</>
+			)}
+			{selectedProvider === "perplexity" && (
+				<>
+					<VSCodeTextField
+						value={apiConfiguration?.apiKey || ""}
+						type="password"
+						onInput={handleInputChange("apiKey")}
+						placeholder={t("settings:placeholders.apiKey")}
+						className="w-full">
+						<label className="block font-medium mb-1">{t("settings:providers.perplexityApiKey")}</label>
+					</VSCodeTextField>
+					<div className="text-sm text-vscode-descriptionForeground -mt-2">
+						{t("settings:providers.apiKeyStorageNotice")}
+					</div>
+				</>
+			)}
+
+			{selectedProvider === "cloudgroq" && (
+				<>
+					<VSCodeTextField
+						value={apiConfiguration?.apiKey || ""}
+						type="password"
+						onInput={handleInputChange("apiKey")}
+						placeholder={t("settings:placeholders.apiKey")}
+						className="w-full">
+						<label className="block font-medium mb-1">{t("settings:providers.cloudGroqApiKey")}</label>
+					</VSCodeTextField>
+					<div className="text-sm text-vscode-descriptionForeground -mt-2">
+						{t("settings:providers.apiKeyStorageNotice")}
+					</div>
 				</>
 			)}
 

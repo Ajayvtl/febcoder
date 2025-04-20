@@ -3,7 +3,7 @@ import { REASONING_MODELS } from "../api/providers/constants"
 
 export { REASONING_MODELS }
 
-export type { ModelInfo, ProviderName as ApiProvider }
+export type { ModelInfo, ProviderName as ApiProvider, ProviderSettings }
 
 export type ApiHandlerOptions = Omit<ProviderSettings, "apiProvider" | "id">
 
@@ -1064,6 +1064,38 @@ export const unboundDefaultModelInfo: ModelInfo = {
 	cacheWritesPrice: 3.75,
 	cacheReadsPrice: 0.3,
 }
+
+// Perplexity
+// https://docs.perplexity.ai/docs/model-cards
+export type PerplexityModelId = keyof typeof perplexityModels
+export const perplexityDefaultModelId: PerplexityModelId = "pplx-7b-online"
+export const perplexityModels = {
+	"pplx-7b-online": {
+		maxTokens: 8192,
+		contextWindow: 128_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 0.2,
+		outputPrice: 0.8,
+		description: "Perplexity 7B online model with 128K context window"
+	},
+} as const satisfies Record<string, ModelInfo>
+
+// CloudGroq
+// https://groq.com/docs/models
+export type CloudGroqModelId = keyof typeof cloudGroqModels
+export const cloudGroqDefaultModelId: CloudGroqModelId = "mixtral-8x7b-32768"
+export const cloudGroqModels = {
+	"mixtral-8x7b-32768": {
+		maxTokens: 8192,
+		contextWindow: 32_768,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 0.1,
+		outputPrice: 0.4,
+		description: "Groq Mixtral 8x7B model with 32K context window"
+	},
+} as const satisfies Record<string, ModelInfo>
 
 // xAI
 // https://docs.x.ai/docs/api-reference

@@ -23,7 +23,7 @@ export async function useMcpToolTool(
 				arguments: removeClosingTag("arguments", mcp_arguments),
 			} satisfies ClineAskUseMcpServer)
 
-			await cline.ask("use_mcp_server", partialMessage, block.partial).catch(() => {})
+			await cline.ask("use_mcp_server", partialMessage, block.partial).catch(() => { })
 			return
 		} else {
 			if (!server_name) {
@@ -48,7 +48,7 @@ export async function useMcpToolTool(
 				} catch (error) {
 					cline.consecutiveMistakeCount++
 					cline.recordToolError("use_mcp_tool")
-					await cline.say("error", `Roo tried to use ${tool_name} with an invalid JSON argument. Retrying...`)
+					await cline.say("error", `Feb tried to use ${tool_name} with an invalid JSON argument. Retrying...`)
 
 					pushToolResult(
 						formatResponse.toolError(formatResponse.invalidMcpToolArgumentError(server_name, tool_name)),
@@ -84,19 +84,19 @@ export async function useMcpToolTool(
 			// TODO: add progress indicator and ability to parse images and non-text responses
 			const toolResultPretty =
 				(toolResult?.isError ? "Error:\n" : "") +
-					toolResult?.content
-						.map((item) => {
-							if (item.type === "text") {
-								return item.text
-							}
-							if (item.type === "resource") {
-								const { blob, ...rest } = item.resource
-								return JSON.stringify(rest, null, 2)
-							}
-							return ""
-						})
-						.filter(Boolean)
-						.join("\n\n") || "(No response)"
+				toolResult?.content
+					.map((item) => {
+						if (item.type === "text") {
+							return item.text
+						}
+						if (item.type === "resource") {
+							const { blob, ...rest } = item.resource
+							return JSON.stringify(rest, null, 2)
+						}
+						return ""
+					})
+					.filter(Boolean)
+					.join("\n\n") || "(No response)"
 
 			await cline.say("mcp_server_response", toolResultPretty)
 			pushToolResult(formatResponse.toolResult(toolResultPretty))

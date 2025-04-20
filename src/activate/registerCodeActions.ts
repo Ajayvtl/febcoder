@@ -10,7 +10,7 @@ export const registerCodeActions = (context: vscode.ExtensionContext) => {
 		context,
 		COMMAND_IDS.EXPLAIN,
 		"EXPLAIN",
-		"What would you like Roo to explain?",
+		"What would you like Feb to explain?",
 		"E.g. How does the error handling work?",
 	)
 
@@ -18,7 +18,7 @@ export const registerCodeActions = (context: vscode.ExtensionContext) => {
 		context,
 		COMMAND_IDS.FIX,
 		"FIX",
-		"What would you like Roo to fix?",
+		"What would you like Feb to fix?",
 		"E.g. Maintain backward compatibility",
 	)
 
@@ -26,7 +26,7 @@ export const registerCodeActions = (context: vscode.ExtensionContext) => {
 		context,
 		COMMAND_IDS.IMPROVE,
 		"IMPROVE",
-		"What would you like Roo to improve?",
+		"What would you like Feb to improve?",
 		"E.g. Focus on performance optimization",
 	)
 
@@ -65,7 +65,7 @@ const registerCodeAction = (
 				// Called directly from command palette.
 				const context = EditorUtils.getEditorContext()
 				if (!context) return
-				;({ filePath, selectedText, startLine, endLine, diagnostics } = context)
+					; ({ filePath, selectedText, startLine, endLine, diagnostics } = context)
 			}
 
 			const params = {

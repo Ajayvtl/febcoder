@@ -1,14 +1,14 @@
 import { EventEmitter } from "events"
 
-import type { ProviderSettings, GlobalSettings, ClineMessage, TokenUsage, RooCodeEvents } from "./types"
-export type { RooCodeSettings, ProviderSettings, GlobalSettings, ClineMessage, TokenUsage, RooCodeEvents }
+import type { ProviderSettings, GlobalSettings, ClineMessage, TokenUsage, FebCodeEvents } from "./types"
+export type { FebCodeSettings, ProviderSettings, GlobalSettings, ClineMessage, TokenUsage, FebCodeEvents }
 
-import { RooCodeEventName } from "../schemas"
-export type { RooCodeEventName }
+import { FebCodeEventName } from "../schemas"
+export type { FebCodeEventName }
 
-type RooCodeSettings = GlobalSettings & ProviderSettings
+type FebCodeSettings = GlobalSettings & ProviderSettings
 
-export interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
+export interface FebCodeAPI extends EventEmitter<FebCodeEvents> {
 	/**
 	 * Starts a new task with an optional initial message and images.
 	 * @param task Optional initial task message.
@@ -21,7 +21,7 @@ export interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
 		images,
 		newTab,
 	}: {
-		configuration?: RooCodeSettings
+		configuration?: FebCodeSettings
 		text?: string
 		images?: string[]
 		newTab?: boolean
@@ -78,13 +78,13 @@ export interface RooCodeAPI extends EventEmitter<RooCodeEvents> {
 	 * Returns the current configuration.
 	 * @returns The current configuration.
 	 */
-	getConfiguration(): RooCodeSettings
+	getConfiguration(): FebCodeSettings
 
 	/**
 	 * Sets the configuration for the current task.
 	 * @param values An object containing key-value pairs to set.
 	 */
-	setConfiguration(values: RooCodeSettings): Promise<void>
+	setConfiguration(values: FebCodeSettings): Promise<void>
 
 	/**
 	 * Creates a new API configuration profile

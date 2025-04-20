@@ -87,7 +87,7 @@ import { SYSTEM_PROMPT } from "./prompts/system"
 // ... everything else
 import { parseMentions } from "./mentions"
 import { FileContextTracker } from "./context-tracking/FileContextTracker"
-import { RooIgnoreController } from "./ignore/RooIgnoreController"
+import { FebIgnoreController } from "./ignore/FebIgnoreController"
 import { type AssistantMessageContent, parseAssistantMessage } from "./assistant-message"
 import { truncateConversationIfNeeded } from "./sliding-window"
 import { ClineProvider } from "./webview/ClineProvider"
@@ -152,7 +152,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 
 	apiConversationHistory: (Anthropic.MessageParam & { ts?: number })[] = []
 	clineMessages: ClineMessage[] = []
-	rooIgnoreController?: RooIgnoreController
+	rooIgnoreController?: FebIgnoreController
 	private askResponse?: ClineAskResponse
 	private askResponseText?: string
 	private askResponseImages?: string[]
@@ -219,10 +219,10 @@ export class Cline extends EventEmitter<ClineEvents> {
 		this.instanceId = crypto.randomUUID().slice(0, 8)
 		this.taskNumber = -1
 
-		this.rooIgnoreController = new RooIgnoreController(this.cwd)
+		this.rooIgnoreController = new FebIgnoreController(this.cwd)
 		this.fileContextTracker = new FileContextTracker(provider, this.taskId)
 		this.rooIgnoreController.initialize().catch((error) => {
-			console.error("Failed to initialize RooIgnoreController:", error)
+			console.error("Failed to initialize FebIgnoreController:", error)
 		})
 		this.apiConfiguration = apiConfiguration
 		this.api = buildApiHandler(apiConfiguration)
@@ -373,10 +373,10 @@ export class Cline extends EventEmitter<ClineEvents> {
 
 			const lastRelevantMessage =
 				this.clineMessages[
-					findLastIndex(
-						this.clineMessages,
-						(m) => !(m.ask === "resume_task" || m.ask === "resume_completed_task"),
-					)
+				findLastIndex(
+					this.clineMessages,
+					(m) => !(m.ask === "resume_task" || m.ask === "resume_completed_task"),
+				)
 				]
 
 			let taskDirSize = 0
@@ -583,8 +583,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 	async sayAndCreateMissingParamError(toolName: ToolName, paramName: string, relPath?: string) {
 		await this.say(
 			"error",
-			`Roo tried to use ${toolName}${
-				relPath ? ` for '${relPath.toPosix()}'` : ""
+			`Feb tried to use ${toolName}${relPath ? ` for '${relPath.toPosix()}'` : ""
 			} without value for required parameter '${paramName}'. Retrying...`,
 		)
 		return formatResponse.toolError(formatResponse.missingToolParameterError(paramName))
@@ -848,10 +847,9 @@ export class Cline extends EventEmitter<ClineEvents> {
 		newUserContent.push({
 			type: "text",
 			text:
-				`[TASK RESUMPTION] This task was interrupted ${agoText}. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. If the task has not been completed, retry the last step before interruption and proceed with completing the task.\n\nNote: If you previously attempted a tool use that the user did not provide a result for, you should assume the tool use was not successful and assess whether you should retry. If the last tool was a browser_action, the browser has been closed and you must launch a new browser if needed.${
-					wasRecent
-						? "\n\nIMPORTANT: If the last tool use was a write_to_file that was interrupted, the file was reverted back to its original state before the interrupted edit, and you do NOT need to re-read the file as you already have its up-to-date contents."
-						: ""
+				`[TASK RESUMPTION] This task was interrupted ${agoText}. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. If the task has not been completed, retry the last step before interruption and proceed with completing the task.\n\nNote: If you previously attempted a tool use that the user did not provide a result for, you should assume the tool use was not successful and assess whether you should retry. If the last tool was a browser_action, the browser has been closed and you must launch a new browser if needed.${wasRecent
+					? "\n\nIMPORTANT: If the last tool use was a write_to_file that was interrupted, the file was reverted back to its original state before the interrupted edit, and you do NOT need to re-read the file as you already have its up-to-date contents."
+					: ""
 				}` +
 				(responseText
 					? `\n\nNew instructions for task continuation:\n<user_message>\n${responseText}\n</user_message>`
@@ -1245,9 +1243,8 @@ export class Cline extends EventEmitter<ClineEvents> {
 						case "apply_diff":
 							return `[${block.name} for '${block.params.path}']`
 						case "search_files":
-							return `[${block.name} for '${block.params.regex}'${
-								block.params.file_pattern ? ` in '${block.params.file_pattern}'` : ""
-							}]`
+							return `[${block.name} for '${block.params.regex}'${block.params.file_pattern ? ` in '${block.params.file_pattern}'` : ""
+								}]`
 						case "insert_content":
 							return `[${block.name} for '${block.params.path}']`
 						case "search_and_replace":
@@ -1595,7 +1592,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 				"mistake_limit_reached",
 				this.api.getModel().id.includes("claude")
 					? `This may indicate a failure in his thought process or inability to use a tool properly, which can be mitigated with some user guidance (e.g. "Try breaking down the task into smaller steps").`
-					: "Roo Code uses complex prompts and iterative task execution that may be challenging for less capable models. For best results, it's recommended to use Claude 3.7 Sonnet for its advanced agentic coding capabilities.",
+					: "Feb Code uses complex prompts and iterative task execution that may be challenging for less capable models. For best results, it's recommended to use Claude 3.7 Sonnet for its advanced agentic coding capabilities.",
 			)
 
 			if (response === "messageResponse") {
@@ -1726,10 +1723,9 @@ export class Cline extends EventEmitter<ClineEvents> {
 							type: "text",
 							text:
 								assistantMessage +
-								`\n\n[${
-									cancelReason === "streaming_failed"
-										? "Response interrupted by API Error"
-										: "Response interrupted by user"
+								`\n\n[${cancelReason === "streaming_failed"
+									? "Response interrupted by API Error"
+									: "Response interrupted by user"
 								}]`,
 						},
 					],
@@ -2050,7 +2046,7 @@ export class Cline extends EventEmitter<ClineEvents> {
 			await pWaitFor(() => busyTerminals.every((t) => !TerminalRegistry.isProcessHot(t.id)), {
 				interval: 100,
 				timeout: 15_000,
-			}).catch(() => {})
+			}).catch(() => { })
 		}
 
 		// we want to get diagnostics AFTER terminal cools down for a few reasons: terminal could be scaffolding a project, dev servers (compilers like webpack) will first re-compile and then send diagnostics, etc
@@ -2221,13 +2217,13 @@ export class Cline extends EventEmitter<ClineEvents> {
 			} else {
 				const maxFiles = maxWorkspaceFiles ?? 200
 				const [files, didHitLimit] = await listFiles(this.cwd, true, maxFiles)
-				const { showRooIgnoredFiles = true } = (await this.providerRef.deref()?.getState()) ?? {}
+				const { showFebIgnoredFiles = true } = (await this.providerRef.deref()?.getState()) ?? {}
 				const result = formatResponse.formatFilesList(
 					this.cwd,
 					files,
 					didHitLimit,
 					this.rooIgnoreController,
-					showRooIgnoredFiles,
+					showFebIgnoredFiles,
 				)
 				details += result
 			}

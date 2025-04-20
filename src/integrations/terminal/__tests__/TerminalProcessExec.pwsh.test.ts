@@ -79,7 +79,7 @@ async function testPowerShellCommand(
 			executeCommand: jest.fn(),
 			cwd: vscode.Uri.file("/test/path"),
 		},
-		name: "Roo Code",
+		name: "Feb Code",
 		processId: Promise.resolve(123),
 		creationOptions: {},
 		exitStatus: undefined,
@@ -107,10 +107,10 @@ async function testPowerShellCommand(
 
 		if (useMock) {
 			// Use PowerShell-specific mock stream with predefined output
-			;({ stream, exitCode } = createPowerShellMockStream(expectedOutput))
+			; ({ stream, exitCode } = createPowerShellMockStream(expectedOutput))
 		} else {
 			// Set up the real command stream
-			;({ stream, exitCode } = createPowerShellStream(command))
+			; ({ stream, exitCode } = createPowerShellStream(command))
 		}
 
 		// Configure the mock terminal to return our stream

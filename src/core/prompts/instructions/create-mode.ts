@@ -4,12 +4,12 @@ import { promises as fs } from "fs"
 import { GlobalFileNames } from "../../../shared/globalFileNames"
 
 export async function createModeInstructions(context: vscode.ExtensionContext | undefined): Promise<string> {
-	if (!context) throw new Error("Missing VSCode Extension Context")
+  if (!context) throw new Error("Missing VSCode Extension Context")
 
-	const settingsDir = path.join(context.globalStorageUri.fsPath, "settings")
-	const customModesPath = path.join(settingsDir, GlobalFileNames.customModes)
+  const settingsDir = path.join(context.globalStorageUri.fsPath, "settings")
+  const customModesPath = path.join(settingsDir, GlobalFileNames.customModes)
 
-	return `
+  return `
 Custom modes can be configured in two ways:
   1. Globally via '${customModesPath}' (created automatically on startup)
   2. Per-workspace via '.roomodes' in the workspace root directory
@@ -35,7 +35,7 @@ Both files should follow this structure:
    {
      "slug": "designer", // Required: unique slug with lowercase letters, numbers, and hyphens
      "name": "Designer", // Required: mode display name
-     "roleDefinition": "You are Roo, a UI/UX expert specializing in design systems and frontend development. Your expertise includes:\\n- Creating and maintaining design systems\\n- Implementing responsive and accessible web interfaces\\n- Working with CSS, HTML, and modern frontend frameworks\\n- Ensuring consistent user experiences across platforms", // Required: non-empty
+     "roleDefinition": "You are Feb, a UI/UX expert specializing in design systems and frontend development. Your expertise includes:\\n- Creating and maintaining design systems\\n- Implementing responsive and accessible web interfaces\\n- Working with CSS, HTML, and modern frontend frameworks\\n- Ensuring consistent user experiences across platforms", // Required: non-empty
      "groups": [ // Required: array of tool groups (can be empty)
        "read",    // Read files group (read_file, fetch_instructions, search_files, list_files, list_code_definition_names)
        "edit",    // Edit files group (apply_diff, write_to_file) - allows editing any file

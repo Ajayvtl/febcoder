@@ -43,7 +43,7 @@ const mockArePathsEqual = (path1: string, path2: string): boolean => {
  * @returns Promise resolving to [file paths, limit reached flag]
  */
 export const listFiles = jest.fn((dirPath: string, recursive: boolean, limit: number) => {
-	// Special case: Root or home directories
+	// Special case: Febt or home directories
 	// Prevents tests from trying to list all files in these directories
 	if (dirPath === "/" || dirPath === "/root" || dirPath === "/home/user") {
 		return Promise.resolve([[dirPath], false])

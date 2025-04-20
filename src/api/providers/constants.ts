@@ -1,6 +1,6 @@
 export const DEFAULT_HEADERS = {
-	"HTTP-Referer": "https://github.com/RooVetGit/Roo-Cline",
-	"X-Title": "Roo Code",
+	"HTTP-Referer": "https://github.com/FebVetGit/Feb-Cline",
+	"X-Title": "Feb Code",
 }
 
 export const ANTHROPIC_DEFAULT_MAX_TOKENS = 8192

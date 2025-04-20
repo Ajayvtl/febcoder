@@ -11,10 +11,10 @@ const fontSans = Geist({ variable: "--font-sans", subsets: ["latin"] })
 const fontMono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] })
 
 export const metadata: Metadata = {
-	title: "Roo Code Evals",
+	title: "Feb Code Evals",
 }
 
-export default function RootLayout({
+export default function FebtLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode

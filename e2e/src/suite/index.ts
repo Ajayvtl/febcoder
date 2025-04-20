@@ -3,16 +3,16 @@ import Mocha from "mocha"
 import { glob } from "glob"
 import * as vscode from "vscode"
 
-import type { RooCodeAPI } from "../../../src/exports/roo-code"
+import type { FebCodeAPI } from "../../../src/exports/roo-code"
 
 import { waitFor } from "./utils"
 
 declare global {
-	var api: RooCodeAPI
+	var api: FebCodeAPI
 }
 
 export async function run() {
-	const extension = vscode.extensions.getExtension<RooCodeAPI>("RooVeterinaryInc.roo-cline")
+	const extension = vscode.extensions.getExtension<FebCodeAPI>("FebVeterinaryInc.roo-cline")
 
 	if (!extension) {
 		throw new Error("Extension not found")
@@ -44,7 +44,7 @@ export async function run() {
 	// Add all the tests to the runner.
 	const mocha = new Mocha({ ui: "tdd", timeout: 300_000 })
 	const cwd = path.resolve(__dirname, "..")
-	;(await glob("**/**.test.js", { cwd })).forEach((testFile) => mocha.addFile(path.resolve(cwd, testFile)))
+		; (await glob("**/**.test.js", { cwd })).forEach((testFile) => mocha.addFile(path.resolve(cwd, testFile)))
 
 	// Let's go!
 	return new Promise<void>((resolve, reject) =>

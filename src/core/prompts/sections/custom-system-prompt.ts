@@ -39,7 +39,7 @@ export async function loadSystemPromptFile(cwd: string, mode: Mode): Promise<str
 /**
  * Ensures the .roo directory exists, creating it if necessary
  */
-export async function ensureRooDirectory(cwd: string): Promise<void> {
+export async function ensureFebDirectory(cwd: string): Promise<void> {
 	const rooDir = path.join(cwd, ".roo")
 
 	// Check if directory already exists

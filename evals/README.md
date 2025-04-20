@@ -1,14 +1,14 @@
-# Run Roo Code Evals
+# Run Feb Code Evals
 
 ## Get Started
 
 NOTE: This is MacOS only for now!
 
-Clone the Roo Code repo:
+Clone the Feb Code repo:
 
 ```sh
-git clone https://github.com/RooVetGit/Roo-Code.git
-cd Roo-Code
+git clone https://github.com/FebVetGit/Feb-Code.git
+cd Feb-Code
 ```
 
 Run the setup script:

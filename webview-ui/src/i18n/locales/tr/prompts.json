@@ -7,7 +7,7 @@
 		"editModesConfig": "Mod yapılandırmasını düzenle",
 		"editGlobalModes": "Global modları düzenle",
 		"editProjectModes": "Proje modlarını düzenle (.roomodes)",
-		"createModeHelpText": "Yeni bir özel mod oluşturmak için + düğmesine tıklayın veya sohbette Roo'dan sizin için bir tane oluşturmasını isteyin!"
+		"createModeHelpText": "Yeni bir özel mod oluşturmak için + düğmesine tıklayın veya sohbette Feb'dan sizin için bir tane oluşturmasını isteyin!"
 	},
 	"apiConfiguration": {
 		"title": "API Yapılandırması",
@@ -30,7 +30,7 @@
 	"roleDefinition": {
 		"title": "Rol Tanımı",
 		"resetToDefault": "Varsayılana sıfırla",
-		"description": "Bu mod için Roo'nun uzmanlığını ve kişiliğini tanımlayın. Bu açıklama, Roo'nun kendini nasıl sunduğunu ve görevlere nasıl yaklaştığını şekillendirir."
+		"description": "Bu mod için Feb'nun uzmanlığını ve kişiliğini tanımlayın. Bu açıklama, Feb'nun kendini nasıl sunduğunu ve görevlere nasıl yaklaştığını şekillendirir."
 	},
 	"customInstructions": {
 		"title": "Moda özgü özel talimatlar (isteğe bağlı)",
@@ -40,7 +40,7 @@
 	},
 	"globalCustomInstructions": {
 		"title": "Tüm Modlar için Özel Talimatlar",
-		"description": "Bu talimatlar tüm modlara uygulanır. Aşağıdaki moda özgü talimatlarla geliştirilebilen temel davranış seti sağlarlar.\nRoo'nun editörünüzün görüntüleme dilinden ({{language}}) farklı bir dilde düşünmesini ve konuşmasını istiyorsanız, burada belirtebilirsiniz.",
+		"description": "Bu talimatlar tüm modlara uygulanır. Aşağıdaki moda özgü talimatlarla geliştirilebilen temel davranış seti sağlarlar.\nFeb'nun editörünüzün görüntüleme dilinden ({{language}}) farklı bir dilde düşünmesini ve konuşmasını istiyorsanız, burada belirtebilirsiniz.",
 		"loadFromFile": "Talimatlar ayrıca çalışma alanınızdaki <span>.roo/rules/</span> klasöründen de yüklenebilir (.roorules ve .clinerules kullanımdan kaldırılmıştır ve yakında çalışmayı durduracaklardır)."
 	},
 	"systemPrompt": {
@@ -62,7 +62,7 @@
 		"types": {
 			"ENHANCE": {
 				"label": "Promptu Geliştir",
-				"description": "Girdileriniz için özel öneriler veya iyileştirmeler almak için prompt geliştirmeyi kullanın. Bu, Roo'nun niyetinizi anlamasını ve mümkün olan en iyi yanıtları sağlamasını garanti eder. Sohbetteki ✨ simgesi aracılığıyla kullanılabilir."
+				"description": "Girdileriniz için özel öneriler veya iyileştirmeler almak için prompt geliştirmeyi kullanın. Bu, Feb'nun niyetinizi anlamasını ve mümkün olan en iyi yanıtları sağlamasını garanti eder. Sohbetteki ✨ simgesi aracılığıyla kullanılabilir."
 			},
 			"EXPLAIN": {
 				"label": "Kodu Açıkla",
@@ -127,7 +127,7 @@
 		},
 		"roleDefinition": {
 			"label": "Rol Tanımı",
-			"description": "Bu mod için Roo'nun uzmanlığını ve kişiliğini tanımlayın."
+			"description": "Bu mod için Feb'nun uzmanlığını ve kişiliğini tanımlayın."
 		},
 		"tools": {
 			"label": "Kullanılabilir Araçlar",

@@ -3,7 +3,7 @@ import * as childProcess from "child_process"
 import * as path from "path"
 import * as fs from "fs"
 import * as readline from "readline"
-import { RooIgnoreController } from "../../core/ignore/RooIgnoreController"
+import { FebIgnoreController } from "../../core/ignore/FebIgnoreController"
 import { fileExistsAtPath } from "../../utils/fs"
 /*
 This file provides functionality to perform regex searches on files using ripgrep.
@@ -14,10 +14,10 @@ Key components:
 2. execRipgrep: Executes the ripgrep command and returns the output.
 3. regexSearchFiles: The main function that performs regex searches on files.
    - Parameters:
-     * cwd: The current working directory (for relative path calculation)
-     * directoryPath: The directory to search in
-     * regex: The regular expression to search for (Rust regex syntax)
-     * filePattern: Optional glob pattern to filter files (default: '*')
+	 * cwd: The current working directory (for relative path calculation)
+	 * directoryPath: The directory to search in
+	 * regex: The regular expression to search for (Rust regex syntax)
+	 * filePattern: Optional glob pattern to filter files (default: '*')
    - Returns: A formatted string containing search results with context
 
 The search results include:
@@ -81,9 +81,9 @@ export function truncateLine(line: string, maxLength: number = MAX_LINE_LENGTH):
 /**
  * Get the path to the ripgrep binary within the VSCode installation
  */
-export async function getBinPath(vscodeAppRoot: string): Promise<string | undefined> {
+export async function getBinPath(vscodeAppFebt: string): Promise<string | undefined> {
 	const checkPath = async (pkgFolder: string) => {
-		const fullPath = path.join(vscodeAppRoot, pkgFolder, binName)
+		const fullPath = path.join(vscodeAppFebt, pkgFolder, binName)
 		return (await fileExistsAtPath(fullPath)) ? fullPath : undefined
 	}
 
@@ -140,10 +140,10 @@ export async function regexSearchFiles(
 	directoryPath: string,
 	regex: string,
 	filePattern?: string,
-	rooIgnoreController?: RooIgnoreController,
+	rooIgnoreController?: FebIgnoreController,
 ): Promise<string> {
-	const vscodeAppRoot = vscode.env.appRoot
-	const rgPath = await getBinPath(vscodeAppRoot)
+	const vscodeAppFebt = vscode.env.appFebt
+	const rgPath = await getBinPath(vscodeAppFebt)
 
 	if (!rgPath) {
 		throw new Error("Could not find ripgrep binary")
@@ -212,7 +212,7 @@ export async function regexSearchFiles(
 
 	// console.log(results)
 
-	// Filter results using RooIgnoreController if provided
+	// Filter results using FebIgnoreController if provided
 	const filteredResults = rooIgnoreController
 		? results.filter((result) => rooIgnoreController.validateAccess(result.file))
 		: results

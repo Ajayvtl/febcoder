@@ -9,17 +9,17 @@ import { ApiConfiguration } from "../../../../src/shared/api"
 
 // Test component that consumes the context
 const TestComponent = () => {
-	const { allowedCommands, setAllowedCommands, soundEnabled, showRooIgnoredFiles, setShowRooIgnoredFiles } =
+	const { allowedCommands, setAllowedCommands, soundEnabled, showFebIgnoredFiles, setShowFebIgnoredFiles } =
 		useExtensionState()
 	return (
 		<div>
 			<div data-testid="allowed-commands">{JSON.stringify(allowedCommands)}</div>
 			<div data-testid="sound-enabled">{JSON.stringify(soundEnabled)}</div>
-			<div data-testid="show-rooignored-files">{JSON.stringify(showRooIgnoredFiles)}</div>
+			<div data-testid="show-rooignored-files">{JSON.stringify(showFebIgnoredFiles)}</div>
 			<button data-testid="update-button" onClick={() => setAllowedCommands(["npm install", "git status"])}>
 				Update Commands
 			</button>
-			<button data-testid="toggle-rooignore-button" onClick={() => setShowRooIgnoredFiles(!showRooIgnoredFiles)}>
+			<button data-testid="toggle-rooignore-button" onClick={() => setShowFebIgnoredFiles(!showFebIgnoredFiles)}>
 				Update Commands
 			</button>
 		</div>
@@ -65,7 +65,7 @@ describe("ExtensionStateContext", () => {
 		expect(JSON.parse(screen.getByTestId("sound-enabled").textContent!)).toBe(false)
 	})
 
-	it("initializes with showRooIgnoredFiles set to true", () => {
+	it("initializes with showFebIgnoredFiles set to true", () => {
 		render(
 			<ExtensionStateContextProvider>
 				<TestComponent />
@@ -75,7 +75,7 @@ describe("ExtensionStateContext", () => {
 		expect(JSON.parse(screen.getByTestId("show-rooignored-files").textContent!)).toBe(true)
 	})
 
-	it("updates showRooIgnoredFiles through setShowRooIgnoredFiles", () => {
+	it("updates showFebIgnoredFiles through setShowFebIgnoredFiles", () => {
 		render(
 			<ExtensionStateContextProvider>
 				<TestComponent />
@@ -106,7 +106,7 @@ describe("ExtensionStateContext", () => {
 	it("throws error when used outside provider", () => {
 		// Suppress console.error for this test since we expect an error
 		const consoleSpy = jest.spyOn(console, "error")
-		consoleSpy.mockImplementation(() => {})
+		consoleSpy.mockImplementation(() => { })
 
 		expect(() => {
 			render(<TestComponent />)
@@ -199,7 +199,7 @@ describe("mergeExtensionState", () => {
 			maxWorkspaceFiles: 100,
 			apiConfiguration: { providerId: "openrouter" } as ApiConfiguration,
 			telemetrySetting: "unset",
-			showRooIgnoredFiles: true,
+			showFebIgnoredFiles: true,
 			renderContext: "sidebar",
 			maxReadFileLine: 500,
 		}

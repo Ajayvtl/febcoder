@@ -3,7 +3,7 @@ const vscode = {
 		language: "en", // Default language for tests
 		appName: "Visual Studio Code Test",
 		appHost: "desktop",
-		appRoot: "/test/path",
+		appFebt: "/test/path",
 		machineId: "test-machine-id",
 		sessionId: "test-session-id",
 		shell: "/bin/zsh",
@@ -35,7 +35,7 @@ const vscode = {
 		},
 	},
 	Disposable: class {
-		dispose() {}
+		dispose() { }
 	},
 	Uri: {
 		file: (path) => ({

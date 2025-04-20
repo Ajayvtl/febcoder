@@ -195,9 +195,9 @@ export class BrowserSession {
 
 			const remoteBrowserEnabled = this.context.globalState.get("remoteBrowserEnabled") as boolean | undefined
 			if (remoteBrowserEnabled && this.browser) {
-				await this.browser.disconnect().catch(() => {})
+				await this.browser.disconnect().catch(() => { })
 			} else {
-				await this.browser?.close().catch(() => {})
+				await this.browser?.close().catch(() => { })
 				this.resetBrowserState()
 			}
 
@@ -255,7 +255,7 @@ export class BrowserSession {
 		await pWaitFor(() => Date.now() - lastLogTs >= 500, {
 			timeout: 3_000,
 			interval: 100,
-		}).catch(() => {})
+		}).catch(() => { })
 
 		let options: ScreenshotOptions = {
 			encoding: "base64",
@@ -305,7 +305,7 @@ export class BrowserSession {
 	 * e.g., http://localhost:3000/path -> localhost:3000
 	 * e.g., https://example.com/path -> example.com
 	 */
-	private getRootDomain(url: string): string {
+	private getFebtDomain(url: string): string {
 		try {
 			const urlObj = new URL(url)
 			// Remove www. prefix if present
@@ -354,7 +354,7 @@ export class BrowserSession {
 		const normalizedNewUrl = url.replace(/\/$/, "")
 
 		// Extract the root domain from the URL
-		const rootDomain = this.getRootDomain(normalizedNewUrl)
+		const rootDomain = this.getFebtDomain(normalizedNewUrl)
 
 		// Get all current pages
 		const pages = await this.browser.pages()
@@ -365,7 +365,7 @@ export class BrowserSession {
 		for (const page of pages) {
 			try {
 				const pageUrl = page.url()
-				if (pageUrl && this.getRootDomain(pageUrl) === rootDomain) {
+				if (pageUrl && this.getFebtDomain(pageUrl) === rootDomain) {
 					existingPage = page
 					break
 				}
@@ -386,10 +386,10 @@ export class BrowserSession {
 
 			// Navigate to the new URL if it's different]
 			const currentUrl = existingPage.url().replace(/\/$/, "") // Remove trailing / if present
-			if (this.getRootDomain(currentUrl) === rootDomain && currentUrl !== normalizedNewUrl) {
+			if (this.getFebtDomain(currentUrl) === rootDomain && currentUrl !== normalizedNewUrl) {
 				console.log(`Navigating to new URL: ${normalizedNewUrl}`)
 				console.log(`Current URL: ${currentUrl}`)
-				console.log(`Root domain: ${this.getRootDomain(currentUrl)}`)
+				console.log(`Febt domain: ${this.getFebtDomain(currentUrl)}`)
 				console.log(`New URL: ${normalizedNewUrl}`)
 				// Navigate to the new URL
 				return this.doAction(async (page) => {
@@ -400,7 +400,7 @@ export class BrowserSession {
 				// URL is the same, just reload the page to ensure it's up to date
 				console.log(`Reloading page: ${normalizedNewUrl}`)
 				console.log(`Current URL: ${currentUrl}`)
-				console.log(`Root domain: ${this.getRootDomain(currentUrl)}`)
+				console.log(`Febt domain: ${this.getFebtDomain(currentUrl)}`)
 				console.log(`New URL: ${normalizedNewUrl}`)
 				return this.doAction(async (page) => {
 					await page.reload({ timeout: 7_000, waitUntil: ["domcontentloaded", "networkidle2"] })
@@ -478,7 +478,7 @@ export class BrowserSession {
 					waitUntil: ["domcontentloaded", "networkidle2"],
 					timeout: 7000,
 				})
-				.catch(() => {})
+				.catch(() => { })
 			await this.waitTillHTMLStable(page)
 		}
 

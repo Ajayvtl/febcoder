@@ -193,11 +193,10 @@ export class AwsBedrockHandler extends BaseProvider implements SingleCompletionH
 		// Generate a conversation ID based on the first few messages to maintain cache consistency
 		const conversationId =
 			messages.length > 0
-				? `conv_${messages[0].role}_${
-						typeof messages[0].content === "string"
-							? messages[0].content.substring(0, 20)
-							: "complex_content"
-					}`
+				? `conv_${messages[0].role}_${typeof messages[0].content === "string"
+					? messages[0].content.substring(0, 20)
+					: "complex_content"
+				}`
 				: "default_conversation"
 
 		// Convert messages to Bedrock format, passing the model info and conversation ID
@@ -512,7 +511,7 @@ export class AwsBedrockHandler extends BaseProvider implements SingleCompletionH
 
 	private parseArn(arn: string, region?: string) {
 		/*
-		 * VIA Roo analysis: platform-independent Regex. It's designed to parse Amazon Bedrock ARNs and doesn't rely on any platform-specific features
+		 * VIA Feb analysis: platform-independent Regex. It's designed to parse Amazon Bedrock ARNs and doesn't rely on any platform-specific features
 		 * like file path separators, line endings, or case sensitivity behaviors. The forward slashes in the regex are properly escaped and
 		 * represent literal characters in the AWS ARN format, not filesystem paths. This regex will function consistently across Windows,
 		 * macOS, Linux, and any other operating system where JavaScript runs.
@@ -761,9 +760,9 @@ export class AwsBedrockHandler extends BaseProvider implements SingleCompletionH
 			logLevel: "error" | "warn" | "info" // Log level for this error type
 		}
 	> = {
-		ACCESS_DENIED: {
-			patterns: ["access", "denied", "permission"],
-			messageTemplate: `You don't have access to the model specified. 
+			ACCESS_DENIED: {
+				patterns: ["access", "denied", "permission"],
+				messageTemplate: `You don't have access to the model specified. 
 
 Please verify:
 1. Try cross-region inference if you're using a foundation model
@@ -771,20 +770,20 @@ Please verify:
 3. Your AWS credentials have permission to access this model (check IAM policies)
 4. The region in the ARN matches the region where the model is deployed
 5. If using a provisioned model, ensure it's active and not in a failed state`,
-			logLevel: "error",
-		},
-		NOT_FOUND: {
-			patterns: ["not found", "does not exist"],
-			messageTemplate: `The specified ARN does not exist or is invalid. Please check:
+				logLevel: "error",
+			},
+			NOT_FOUND: {
+				patterns: ["not found", "does not exist"],
+				messageTemplate: `The specified ARN does not exist or is invalid. Please check:
 
 1. The ARN format is correct (arn:aws:bedrock:region:account-id:resource-type/resource-name)
 2. The model exists in the specified region
 3. The account ID in the ARN is correct`,
-			logLevel: "error",
-		},
-		THROTTLING: {
-			patterns: ["throttl", "rate", "limit"],
-			messageTemplate: `Request was throttled or rate limited. Please try:
+				logLevel: "error",
+			},
+			THROTTLING: {
+				patterns: ["throttl", "rate", "limit"],
+				messageTemplate: `Request was throttled or rate limited. Please try:
 1. Reducing the frequency of requests
 2. If using a provisioned model, check its throughput settings
 3. Contact AWS support to request a quota increase if needed
@@ -792,11 +791,11 @@ Please verify:
 {formattedErrorDetails}
 
 `,
-			logLevel: "error",
-		},
-		TOO_MANY_TOKENS: {
-			patterns: ["too many tokens"],
-			messageTemplate: `"Too many tokens" error detected.
+				logLevel: "error",
+			},
+			TOO_MANY_TOKENS: {
+				patterns: ["too many tokens"],
+				messageTemplate: `"Too many tokens" error detected.
 Possible Causes:
 1. Input exceeds model's context window limit
 2. Rate limiting (too many tokens per minute)
@@ -809,32 +808,32 @@ Suggestions:
 3. Use a model with a larger context window
 4. If rate limited, reduce request frequency
 5. Check your Amazon Bedrock quotas and limits`,
-			logLevel: "error",
-		},
-		ON_DEMAND_NOT_SUPPORTED: {
-			patterns: ["with on-demand throughput isn’t supported."],
-			messageTemplate: `
+				logLevel: "error",
+			},
+			ON_DEMAND_NOT_SUPPORTED: {
+				patterns: ["with on-demand throughput isn’t supported."],
+				messageTemplate: `
 1. Try enabling cross-region inference in settings.
 2. Or, create an inference profile and then leverage the "Use custom ARN..." option of the model selector in settings.`,
-			logLevel: "error",
-		},
-		ABORT: {
-			patterns: ["aborterror"], // This will match error.name.toLowerCase() for AbortError
-			messageTemplate: `Request was aborted: The operation timed out or was manually cancelled. Please try again or check your network connection.`,
-			logLevel: "info",
-		},
-		INVALID_ARN_FORMAT: {
-			patterns: ["invalid_arn_format:", "invalid arn format"],
-			messageTemplate: `Invalid ARN format. ARN should follow the pattern: arn:aws:bedrock:region:account-id:resource-type/resource-name`,
-			logLevel: "error",
-		},
-		// Default/generic error
-		GENERIC: {
-			patterns: [], // Empty patterns array means this is the default
-			messageTemplate: `Unknown Error`,
-			logLevel: "error",
-		},
-	}
+				logLevel: "error",
+			},
+			ABORT: {
+				patterns: ["aborterror"], // This will match error.name.toLowerCase() for AbortError
+				messageTemplate: `Request was aborted: The operation timed out or was manually cancelled. Please try again or check your network connection.`,
+				logLevel: "info",
+			},
+			INVALID_ARN_FORMAT: {
+				patterns: ["invalid_arn_format:", "invalid arn format"],
+				messageTemplate: `Invalid ARN format. ARN should follow the pattern: arn:aws:bedrock:region:account-id:resource-type/resource-name`,
+				logLevel: "error",
+			},
+			// Default/generic error
+			GENERIC: {
+				patterns: [], // Empty patterns array means this is the default
+				messageTemplate: `Unknown Error`,
+				logLevel: "error",
+			},
+		}
 
 	/**
 	 * Determines the error type based on the error message or name

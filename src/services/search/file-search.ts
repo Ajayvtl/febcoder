@@ -17,7 +17,7 @@ export async function executeRipgrep({
 	workspacePath: string
 	limit?: number
 }): Promise<FileResult[]> {
-	const rgPath = await getBinPath(vscode.env.appRoot)
+	const rgPath = await getBinPath(vscode.env.appFebt)
 
 	if (!rgPath) {
 		throw new Error(`ripgrep not found: ${rgPath}`)

@@ -12,8 +12,8 @@ import { ClineProvider } from "../webview/ClineProvider"
 import { ApiConfiguration, ModelInfo } from "../../shared/api"
 import { ApiStreamChunk } from "../../api/transform/stream"
 
-// Mock RooIgnoreController
-jest.mock("../ignore/RooIgnoreController")
+// Mock FebIgnoreController
+jest.mock("../ignore/FebIgnoreController")
 
 // Mock storagePathManager to prevent dynamic import issues
 jest.mock("../../shared/storagePathManager", () => ({
@@ -428,7 +428,7 @@ describe("Cline", () => {
 				// Mock abort state
 				Object.defineProperty(cline, "abort", {
 					get: () => false,
-					set: () => {},
+					set: () => { },
 					configurable: true,
 				})
 
@@ -554,13 +554,13 @@ describe("Cline", () => {
 				// Mock abort state for both instances
 				Object.defineProperty(clineWithImages, "abort", {
 					get: () => false,
-					set: () => {},
+					set: () => { },
 					configurable: true,
 				})
 
 				Object.defineProperty(clineWithoutImages, "abort", {
 					get: () => false,
-					set: () => {},
+					set: () => { },
 					configurable: true,
 				})
 
@@ -601,10 +601,10 @@ describe("Cline", () => {
 				]
 
 				clineWithImages.abandoned = true
-				await taskWithImages.catch(() => {})
+				await taskWithImages.catch(() => { })
 
 				clineWithoutImages.abandoned = true
-				await taskWithoutImages.catch(() => {})
+				await taskWithoutImages.catch(() => { })
 
 				// Trigger API requests
 				await clineWithImages.recursivelyMakeClineRequests([{ type: "text", text: "test request" }])
@@ -749,7 +749,7 @@ describe("Cline", () => {
 				)
 
 				await cline.abortTask(true)
-				await task.catch(() => {})
+				await task.catch(() => { })
 			})
 
 			it.skip("should not apply retry delay twice", async () => {
@@ -872,7 +872,7 @@ describe("Cline", () => {
 				)
 
 				await cline.abortTask(true)
-				await task.catch(() => {})
+				await task.catch(() => { })
 			})
 
 			describe("loadContext", () => {
@@ -950,7 +950,7 @@ describe("Cline", () => {
 					expect((content2 as Anthropic.TextBlockParam).text).toBe("Regular tool result with @/path")
 
 					await cline.abortTask(true)
-					await task.catch(() => {})
+					await task.catch(() => { })
 				})
 			})
 		})

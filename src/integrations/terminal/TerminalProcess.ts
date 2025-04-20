@@ -27,7 +27,7 @@
 	All other interfaces are private.
 
 	Warning: Modifying this class without fully understanding VSCE shell integration
-	        architecture may affect the reliability or performance of reading terminal output.
+			architecture may affect the reliability or performance of reading terminal output.
 
 	This class was carefully designed for performance and accuracy:
 
@@ -294,7 +294,7 @@ export class TerminalProcess extends EventEmitter<TerminalProcessEvents> {
 
 				// Only add the PowerShell counter workaround if enabled
 				if (Terminal.getPowershellCounter()) {
-					commandToExecute += ` ; "(Roo/PS Workaround: ${this.terminalInfo.cmdCounter++})" > $null`
+					commandToExecute += ` ; "(Feb/PS Workaround: ${this.terminalInfo.cmdCounter++})" > $null`
 				}
 
 				// Only add the sleep command if the command delay is greater than 0
@@ -432,8 +432,8 @@ export class TerminalProcess extends EventEmitter<TerminalProcessEvents> {
 				this.emit(
 					"completed",
 					"<VSCE shell integration markers not found: terminal output and command execution status is unknown>\n" +
-						`<preOutput>${inspectPreOutput}</preOutput>\n` +
-						"AI MODEL: You MUST notify the user with the information above so they can open a bug report.",
+					`<preOutput>${inspectPreOutput}</preOutput>\n` +
+					"AI MODEL: You MUST notify the user with the information above so they can open a bug report.",
 				)
 
 				this.continue()
@@ -688,7 +688,7 @@ export type TerminalProcessResultPromise = TerminalProcess & Promise<void>
 
 // Similar to execa's ResultPromise, this lets us create a mixin of both a TerminalProcess and a Promise: https://github.com/sindresorhus/execa/blob/main/lib/methods/promise.js
 export function mergePromise(process: TerminalProcess, promise: Promise<void>): TerminalProcessResultPromise {
-	const nativePromisePrototype = (async () => {})().constructor.prototype
+	const nativePromisePrototype = (async () => { })().constructor.prototype
 	const descriptors = ["then", "catch", "finally"].map(
 		(property) => [property, Reflect.getOwnPropertyDescriptor(nativePromisePrototype, property)] as const,
 	)

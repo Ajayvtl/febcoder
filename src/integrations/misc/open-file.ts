@@ -28,13 +28,13 @@ interface OpenFileOptions {
 export async function openFile(filePath: string, options: OpenFileOptions = {}) {
 	try {
 		// Get workspace root
-		const workspaceRoot = getWorkspacePath()
-		if (!workspaceRoot) {
+		const workspaceFebt = getWorkspacePath()
+		if (!workspaceFebt) {
 			throw new Error("No workspace root found")
 		}
 
 		// If path starts with ./, resolve it relative to workspace root
-		const fullPath = filePath.startsWith("./") ? path.join(workspaceRoot, filePath.slice(2)) : filePath
+		const fullPath = filePath.startsWith("./") ? path.join(workspaceFebt, filePath.slice(2)) : filePath
 
 		const uri = vscode.Uri.file(fullPath)
 
@@ -70,7 +70,7 @@ export async function openFile(filePath: string, options: OpenFileOptions = {}) 
 					break
 				}
 			}
-		} catch {} // not essential, sometimes tab operations fail
+		} catch { } // not essential, sometimes tab operations fail
 
 		const document = await vscode.workspace.openTextDocument(uri)
 		await vscode.window.showTextDocument(document, { preview: false })

@@ -1,6 +1,6 @@
 export const LOCK_TEXT_SYMBOL = "\u{1F512}"
 
-export class RooIgnoreController {
+export class FebIgnoreController {
 	rooIgnoreContent: string | undefined = undefined
 
 	constructor(cwd: string) {

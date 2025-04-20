@@ -1,7 +1,7 @@
 // npx jest src/core/prompts/__tests__/responses-rooignore.test.ts
 
 import { formatResponse } from "../responses"
-import { RooIgnoreController, LOCK_TEXT_SYMBOL } from "../../ignore/RooIgnoreController"
+import { FebIgnoreController, LOCK_TEXT_SYMBOL } from "../../ignore/FebIgnoreController"
 import { fileExistsAtPath } from "../../../utils/fs"
 import * as fs from "fs/promises"
 import { toPosix } from "./utils"
@@ -24,7 +24,7 @@ jest.mock("vscode", () => {
 	}
 })
 
-describe("RooIgnore Response Formatting", () => {
+describe("FebIgnore Response Formatting", () => {
 	const TEST_CWD = "/test/path"
 	let mockFileExists: jest.MockedFunction<typeof fileExistsAtPath>
 	let mockReadFile: jest.MockedFunction<typeof fs.readFile>
@@ -69,13 +69,13 @@ describe("RooIgnore Response Formatting", () => {
 		})
 	})
 
-	describe("formatResponse.formatFilesList with RooIgnoreController", () => {
+	describe("formatResponse.formatFilesList with FebIgnoreController", () => {
 		/**
 		 * Tests file listing with rooignore controller
 		 */
 		it("should format files list with lock symbols for ignored files", async () => {
 			// Create controller
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Mock validateAccess to control which files are ignored
@@ -115,11 +115,11 @@ describe("RooIgnore Response Formatting", () => {
 		})
 
 		/**
-		 * Tests formatFilesList when showRooIgnoredFiles is set to false
+		 * Tests formatFilesList when showFebIgnoredFiles is set to false
 		 */
-		it("should hide ignored files when showRooIgnoredFiles is false", async () => {
+		it("should hide ignored files when showFebIgnoredFiles is false", async () => {
 			// Create controller
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Mock validateAccess to control which files are ignored
@@ -141,13 +141,13 @@ describe("RooIgnore Response Formatting", () => {
 				"secrets/keys.json", // ignored
 			]
 
-			// Format with controller and showRooIgnoredFiles = false
+			// Format with controller and showFebIgnoredFiles = false
 			const result = formatResponse.formatFilesList(
 				TEST_CWD,
 				files,
 				false,
 				controller as any,
-				false, // showRooIgnoredFiles = false
+				false, // showFebIgnoredFiles = false
 			)
 
 			// Should contain allowed files
@@ -166,11 +166,11 @@ describe("RooIgnore Response Formatting", () => {
 		})
 
 		/**
-		 * Tests formatFilesList handles truncation correctly with RooIgnoreController
+		 * Tests formatFilesList handles truncation correctly with FebIgnoreController
 		 */
-		it("should handle truncation with RooIgnoreController", async () => {
+		it("should handle truncation with FebIgnoreController", async () => {
 			// Create controller
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Format with controller and truncation flag
@@ -190,9 +190,9 @@ describe("RooIgnore Response Formatting", () => {
 		/**
 		 * Tests formatFilesList handles empty results
 		 */
-		it("should handle empty file list with RooIgnoreController", async () => {
+		it("should handle empty file list with FebIgnoreController", async () => {
 			// Create controller
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Format with empty files array
@@ -209,7 +209,7 @@ describe("RooIgnore Response Formatting", () => {
 		 */
 		it("should format .rooignore instructions for the LLM", async () => {
 			// Create controller
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Get instructions
@@ -236,7 +236,7 @@ describe("RooIgnore Response Formatting", () => {
 			mockFileExists.mockResolvedValue(false)
 
 			// Create controller without .rooignore
-			const controller = new RooIgnoreController(TEST_CWD)
+			const controller = new FebIgnoreController(TEST_CWD)
 			await controller.initialize()
 
 			// Should return undefined

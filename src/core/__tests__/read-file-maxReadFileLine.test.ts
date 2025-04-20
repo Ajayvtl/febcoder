@@ -31,8 +31,8 @@ const addLineNumbersSpy = jest.requireMock("../../integrations/misc/extract-text
 
 jest.mock("../../services/tree-sitter")
 jest.mock("isbinaryfile")
-jest.mock("../ignore/RooIgnoreController", () => ({
-	RooIgnoreController: class {
+jest.mock("../ignore/FebIgnoreController", () => ({
+	FebIgnoreController: class {
 		initialize() {
 			return Promise.resolve()
 		}

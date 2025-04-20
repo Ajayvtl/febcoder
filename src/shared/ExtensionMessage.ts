@@ -30,54 +30,54 @@ export interface LanguageModelChatSelector {
 // 'settingsButtonClicked' or 'hello'. Webview will hold state.
 export interface ExtensionMessage {
 	type:
-		| "action"
-		| "state"
-		| "selectedImages"
-		| "ollamaModels"
-		| "lmStudioModels"
-		| "theme"
-		| "workspaceUpdated"
-		| "invoke"
-		| "partialMessage"
-		| "openRouterModels"
-		| "glamaModels"
-		| "unboundModels"
-		| "requestyModels"
-		| "openAiModels"
-		| "mcpServers"
-		| "enhancedPrompt"
-		| "commitSearchResults"
-		| "listApiConfig"
-		| "vsCodeLmModels"
-		| "vsCodeLmApiAvailable"
-		| "requestVsCodeLmModels"
-		| "updatePrompt"
-		| "systemPrompt"
-		| "autoApprovalEnabled"
-		| "updateCustomMode"
-		| "deleteCustomMode"
-		| "currentCheckpointUpdated"
-		| "showHumanRelayDialog"
-		| "humanRelayResponse"
-		| "humanRelayCancel"
-		| "browserToolEnabled"
-		| "browserConnectionResult"
-		| "remoteBrowserEnabled"
-		| "ttsStart"
-		| "ttsStop"
-		| "maxReadFileLine"
-		| "fileSearchResults"
-		| "toggleApiConfigPin"
-		| "acceptInput"
+	| "action"
+	| "state"
+	| "selectedImages"
+	| "ollamaModels"
+	| "lmStudioModels"
+	| "theme"
+	| "workspaceUpdated"
+	| "invoke"
+	| "partialMessage"
+	| "openRouterModels"
+	| "glamaModels"
+	| "unboundModels"
+	| "requestyModels"
+	| "openAiModels"
+	| "mcpServers"
+	| "enhancedPrompt"
+	| "commitSearchResults"
+	| "listApiConfig"
+	| "vsCodeLmModels"
+	| "vsCodeLmApiAvailable"
+	| "requestVsCodeLmModels"
+	| "updatePrompt"
+	| "systemPrompt"
+	| "autoApprovalEnabled"
+	| "updateCustomMode"
+	| "deleteCustomMode"
+	| "currentCheckpointUpdated"
+	| "showHumanRelayDialog"
+	| "humanRelayResponse"
+	| "humanRelayCancel"
+	| "browserToolEnabled"
+	| "browserConnectionResult"
+	| "remoteBrowserEnabled"
+	| "ttsStart"
+	| "ttsStop"
+	| "maxReadFileLine"
+	| "fileSearchResults"
+	| "toggleApiConfigPin"
+	| "acceptInput"
 	text?: string
 	action?:
-		| "chatButtonClicked"
-		| "mcpButtonClicked"
-		| "settingsButtonClicked"
-		| "historyButtonClicked"
-		| "promptsButtonClicked"
-		| "didBecomeVisible"
-		| "focusInput"
+	| "chatButtonClicked"
+	| "mcpButtonClicked"
+	| "settingsButtonClicked"
+	| "historyButtonClicked"
+	| "promptsButtonClicked"
+	| "didBecomeVisible"
+	| "focusInput"
 	invoke?: "newChat" | "sendMessage" | "primaryButtonClick" | "secondaryButtonClick" | "setChatBoxMessage"
 	state?: ExtensionState
 	images?: string[]
@@ -148,7 +148,7 @@ export type ExtensionState = Pick<
 	| "soundVolume"
 	// | "maxOpenTabsContext" // Optional in GlobalSettings, required here.
 	// | "maxWorkspaceFiles" // Optional in GlobalSettings, required here.
-	// | "showRooIgnoredFiles" // Optional in GlobalSettings, required here.
+	// | "showFebIgnoredFiles" // Optional in GlobalSettings, required here.
 	// | "maxReadFileLine" // Optional in GlobalSettings, required here.
 	| "terminalOutputLineLimit"
 	| "terminalShellIntegrationTimeout"
@@ -187,7 +187,7 @@ export type ExtensionState = Pick<
 	enableCheckpoints: boolean
 	maxOpenTabsContext: number // Maximum number of VSCode open tabs to include in context (0-500)
 	maxWorkspaceFiles: number // Maximum number of files to include in current working directory details (0-500)
-	showRooIgnoredFiles: boolean // Whether to show .rooignore'd files in listings
+	showFebIgnoredFiles: boolean // Whether to show .rooignore'd files in listings
 	maxReadFileLine: number // Maximum number of lines to read from a file before truncating
 
 	experiments: Record<ExperimentId, boolean> // Map of experiment IDs to their enabled state
@@ -212,18 +212,18 @@ export type { ClineMessage, ClineAsk, ClineSay }
 
 export interface ClineSayTool {
 	tool:
-		| "editedExistingFile"
-		| "appliedDiff"
-		| "newFileCreated"
-		| "readFile"
-		| "fetchInstructions"
-		| "listFilesTopLevel"
-		| "listFilesRecursive"
-		| "listCodeDefinitionNames"
-		| "searchFiles"
-		| "switchMode"
-		| "newTask"
-		| "finishTask"
+	| "editedExistingFile"
+	| "appliedDiff"
+	| "newFileCreated"
+	| "readFile"
+	| "fetchInstructions"
+	| "listFilesTopLevel"
+	| "listFilesRecursive"
+	| "listCodeDefinitionNames"
+	| "searchFiles"
+	| "switchMode"
+	| "newTask"
+	| "finishTask"
 	path?: string
 	diff?: string
 	content?: string

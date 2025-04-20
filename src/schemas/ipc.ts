@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { RooCodeEventName, rooCodeEventsSchema, rooCodeSettingsSchema } from "./index"
+import { FebCodeEventName, rooCodeEventsSchema, rooCodeSettingsSchema } from "./index"
 
 /**
  * Ack
@@ -52,48 +52,48 @@ export type TaskCommand = z.infer<typeof taskCommandSchema>
 
 export const taskEventSchema = z.discriminatedUnion("eventName", [
 	z.object({
-		eventName: z.literal(RooCodeEventName.Message),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.Message],
+		eventName: z.literal(FebCodeEventName.Message),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.Message],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskCreated),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskCreated],
+		eventName: z.literal(FebCodeEventName.TaskCreated),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskCreated],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskStarted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskStarted],
+		eventName: z.literal(FebCodeEventName.TaskStarted),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskStarted],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskModeSwitched),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskModeSwitched],
+		eventName: z.literal(FebCodeEventName.TaskModeSwitched),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskModeSwitched],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskPaused),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskPaused],
+		eventName: z.literal(FebCodeEventName.TaskPaused),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskPaused],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskUnpaused),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskUnpaused],
+		eventName: z.literal(FebCodeEventName.TaskUnpaused),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskUnpaused],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskAskResponded),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskAskResponded],
+		eventName: z.literal(FebCodeEventName.TaskAskResponded),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskAskResponded],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskAborted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskAborted],
+		eventName: z.literal(FebCodeEventName.TaskAborted),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskAborted],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskSpawned),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskSpawned],
+		eventName: z.literal(FebCodeEventName.TaskSpawned),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskSpawned],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskCompleted),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskCompleted],
+		eventName: z.literal(FebCodeEventName.TaskCompleted),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskCompleted],
 	}),
 	z.object({
-		eventName: z.literal(RooCodeEventName.TaskTokenUsageUpdated),
-		payload: rooCodeEventsSchema.shape[RooCodeEventName.TaskTokenUsageUpdated],
+		eventName: z.literal(FebCodeEventName.TaskTokenUsageUpdated),
+		payload: rooCodeEventsSchema.shape[FebCodeEventName.TaskTokenUsageUpdated],
 	}),
 ])
 

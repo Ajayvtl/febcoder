@@ -4,7 +4,7 @@ import { listFiles } from "../glob/list-files"
 import { LanguageParser, loadRequiredLanguageParsers } from "./languageParser"
 import { fileExistsAtPath } from "../../utils/fs"
 import { parseMarkdown, formatMarkdownCaptures } from "./markdownParser"
-import { RooIgnoreController } from "../../core/ignore/RooIgnoreController"
+import { FebIgnoreController } from "../../core/ignore/FebIgnoreController"
 
 const extensions = [
 	"js",
@@ -40,7 +40,7 @@ const extensions = [
 
 export async function parseSourceCodeDefinitionsForFile(
 	filePath: string,
-	rooIgnoreController?: RooIgnoreController,
+	rooIgnoreController?: FebIgnoreController,
 ): Promise<string | undefined> {
 	// check if the file exists
 	const fileExists = await fileExistsAtPath(path.resolve(filePath))
@@ -95,7 +95,7 @@ export async function parseSourceCodeDefinitionsForFile(
 // TODO: implement caching behavior to avoid having to keep analyzing project for new tasks.
 export async function parseSourceCodeForDefinitionsTopLevel(
 	dirPath: string,
-	rooIgnoreController?: RooIgnoreController,
+	rooIgnoreController?: FebIgnoreController,
 ): Promise<string> {
 	// check if the path exists
 	const dirExists = await fileExistsAtPath(path.resolve(dirPath))
@@ -180,7 +180,7 @@ Parsing files using tree-sitter
 
 1. Parse the file content into an AST (Abstract Syntax Tree) using the appropriate language grammar (set of rules that define how the components of a language like keywords, expressions, and statements can be combined to create valid programs).
 2. Create a query using a language-specific query string, and run it against the AST's root node to capture specific syntax elements.
-    - We use tag queries to identify named entities in a program, and then use a syntax capture to label the entity and its name. A notable example of this is GitHub's search-based code navigation.
+	- We use tag queries to identify named entities in a program, and then use a syntax capture to label the entity and its name. A notable example of this is GitHub's search-based code navigation.
 	- Our custom tag queries are based on tree-sitter's default tag queries, but modified to only capture definitions.
 3. Sort the captures by their position in the file, output the name of the definition, and format by i.e. adding "|----\n" for gaps between captured sections.
 
@@ -321,7 +321,7 @@ function processCaptures(captures: any[], lines: string[], minComponentLines: nu
 async function parseFile(
 	filePath: string,
 	languageParsers: LanguageParser,
-	rooIgnoreController?: RooIgnoreController,
+	rooIgnoreController?: FebIgnoreController,
 ): Promise<string | null> {
 	// Minimum number of lines for a component to be included
 	const MIN_COMPONENT_LINES = 4

@@ -1,6 +1,6 @@
 # Cache Strategy Documentation
 
-This document provides an overview of the cache strategy implementation for Amazon Bedrock in the Roo-Code project, including class relationships and sequence diagrams.
+This document provides an overview of the cache strategy implementation for Amazon Bedrock in the Feb-Code project, including class relationships and sequence diagrams.
 
 ## Class Relationship Diagram
 

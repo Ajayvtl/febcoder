@@ -23,7 +23,7 @@ function asObjectSafe(value: any): object {
 
 		return {}
 	} catch (error) {
-		console.warn("Roo Code <Language Model API>: Failed to parse object:", error)
+		console.warn("Feb Code <Language Model API>: Failed to parse object:", error)
 		return {}
 	}
 }
@@ -71,13 +71,13 @@ export function convertToVsCodeLmMessages(
 							typeof toolMessage.content === "string"
 								? [new vscode.LanguageModelTextPart(toolMessage.content)]
 								: (toolMessage.content?.map((part) => {
-										if (part.type === "image") {
-											return new vscode.LanguageModelTextPart(
-												`[Image (${part.source?.type || "Unknown source-type"}): ${part.source?.media_type || "unknown media-type"} not supported by VSCode LM API]`,
-											)
-										}
-										return new vscode.LanguageModelTextPart(part.text)
-									}) ?? [new vscode.LanguageModelTextPart("")])
+									if (part.type === "image") {
+										return new vscode.LanguageModelTextPart(
+											`[Image (${part.source?.type || "Unknown source-type"}): ${part.source?.media_type || "unknown media-type"} not supported by VSCode LM API]`,
+										)
+									}
+									return new vscode.LanguageModelTextPart(part.text)
+								}) ?? [new vscode.LanguageModelTextPart("")])
 
 						return new vscode.LanguageModelToolResultPart(toolMessage.tool_use_id, toolContentParts)
 					}),

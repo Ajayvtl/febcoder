@@ -1,6 +1,6 @@
 {
 	"extension": {
-		"name": "Roo Code",
+		"name": "Feb Code",
 		"description": "Un intero team di sviluppatori AI nel tuo editor."
 	},
 	"number_format": {
@@ -82,12 +82,12 @@
 	},
 	"storage": {
 		"prompt_custom_path": "Inserisci il percorso di archiviazione personalizzato per la cronologia delle conversazioni, lascia vuoto per utilizzare la posizione predefinita",
-		"path_placeholder": "D:\\RooCodeStorage",
-		"enter_absolute_path": "Inserisci un percorso assoluto (ad esempio D:\\RooCodeStorage o /home/user/storage)",
+		"path_placeholder": "D:\\FebCodeStorage",
+		"enter_absolute_path": "Inserisci un percorso assoluto (ad esempio D:\\FebCodeStorage o /home/user/storage)",
 		"enter_valid_path": "Inserisci un percorso valido"
 	},
 	"input": {
-		"task_prompt": "Cosa deve fare Roo?",
+		"task_prompt": "Cosa deve fare Feb?",
 		"task_placeholder": "Scrivi il tuo compito qui"
 	}
 }

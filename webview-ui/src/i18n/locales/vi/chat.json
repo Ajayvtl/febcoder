@@ -1,5 +1,5 @@
 {
-	"greeting": "Chào mừng đến với Roo Code",
+	"greeting": "Chào mừng đến với Feb Code",
 	"task": {
 		"title": "Nhiệm vụ",
 		"seeMore": "Xem thêm",
@@ -65,7 +65,7 @@
 		"tooltip": "Hủy thao tác hiện tại"
 	},
 	"scrollToBottom": "Cuộn xuống cuối cuộc trò chuyện",
-	"onboarding": "<strong>Danh sách nhiệm vụ của bạn trong không gian làm việc này trống.</strong> Bắt đầu bằng cách nhập nhiệm vụ bên dưới. Bạn không chắc chắn nên bắt đầu như thế nào? Đọc thêm về những gì Roo có thể làm cho bạn trong <DocsLink>tài liệu</DocsLink>.",
+	"onboarding": "<strong>Danh sách nhiệm vụ của bạn trong không gian làm việc này trống.</strong> Bắt đầu bằng cách nhập nhiệm vụ bên dưới. Bạn không chắc chắn nên bắt đầu như thế nào? Đọc thêm về những gì Feb có thể làm cho bạn trong <DocsLink>tài liệu</DocsLink>.",
 	"selectMode": "Chọn chế độ tương tác",
 	"selectApiConfig": "Chọn cấu hình API",
 	"enhancePrompt": "Nâng cao yêu cầu với ngữ cảnh bổ sung",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "Chỉnh sửa không thành công"
 	},
-	"troubleMessage": "Roo đang gặp sự cố...",
+	"troubleMessage": "Feb đang gặp sự cố...",
 	"apiRequest": {
 		"title": "Yêu cầu API",
 		"failed": "Yêu cầu API thất bại",
@@ -112,42 +112,42 @@
 		"current": "Hiện tại"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo muốn lấy hướng dẫn chi tiết để hỗ trợ nhiệm vụ hiện tại"
+		"wantsToFetch": "Feb muốn lấy hướng dẫn chi tiết để hỗ trợ nhiệm vụ hiện tại"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo muốn đọc tệp này:",
-		"wantsToReadOutsideWorkspace": "Roo muốn đọc tệp này bên ngoài không gian làm việc:",
-		"didRead": "Roo đã đọc tệp này:",
-		"wantsToEdit": "Roo muốn chỉnh sửa tệp này:",
-		"wantsToEditOutsideWorkspace": "Roo muốn chỉnh sửa tệp này bên ngoài không gian làm việc:",
-		"wantsToCreate": "Roo muốn tạo một tệp mới:"
+		"wantsToRead": "Feb muốn đọc tệp này:",
+		"wantsToReadOutsideWorkspace": "Feb muốn đọc tệp này bên ngoài không gian làm việc:",
+		"didRead": "Feb đã đọc tệp này:",
+		"wantsToEdit": "Feb muốn chỉnh sửa tệp này:",
+		"wantsToEditOutsideWorkspace": "Feb muốn chỉnh sửa tệp này bên ngoài không gian làm việc:",
+		"wantsToCreate": "Feb muốn tạo một tệp mới:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo muốn xem các tệp cấp cao nhất trong thư mục này:",
-		"didViewTopLevel": "Roo đã xem các tệp cấp cao nhất trong thư mục này:",
-		"wantsToViewRecursive": "Roo muốn xem đệ quy tất cả các tệp trong thư mục này:",
-		"didViewRecursive": "Roo đã xem đệ quy tất cả các tệp trong thư mục này:",
-		"wantsToViewDefinitions": "Roo muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
-		"didViewDefinitions": "Roo đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
-		"wantsToSearch": "Roo muốn tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
-		"didSearch": "Roo đã tìm kiếm trong thư mục này cho <code>{{regex}}</code>:"
+		"wantsToViewTopLevel": "Feb muốn xem các tệp cấp cao nhất trong thư mục này:",
+		"didViewTopLevel": "Feb đã xem các tệp cấp cao nhất trong thư mục này:",
+		"wantsToViewRecursive": "Feb muốn xem đệ quy tất cả các tệp trong thư mục này:",
+		"didViewRecursive": "Feb đã xem đệ quy tất cả các tệp trong thư mục này:",
+		"wantsToViewDefinitions": "Feb muốn xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
+		"didViewDefinitions": "Feb đã xem tên định nghĩa mã nguồn được sử dụng trong thư mục này:",
+		"wantsToSearch": "Feb muốn tìm kiếm trong thư mục này cho <code>{{regex}}</code>:",
+		"didSearch": "Feb đã tìm kiếm trong thư mục này cho <code>{{regex}}</code>:"
 	},
 	"commandOutput": "Kết quả lệnh",
 	"response": "Phản hồi",
 	"arguments": "Tham số",
 	"mcp": {
-		"wantsToUseTool": "Roo muốn sử dụng một công cụ trên máy chủ MCP {{serverName}}:",
-		"wantsToAccessResource": "Roo muốn truy cập một tài nguyên trên máy chủ MCP {{serverName}}:"
+		"wantsToUseTool": "Feb muốn sử dụng một công cụ trên máy chủ MCP {{serverName}}:",
+		"wantsToAccessResource": "Feb muốn truy cập một tài nguyên trên máy chủ MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo muốn chuyển sang chế độ <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Roo muốn chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}",
-		"didSwitch": "Roo đã chuyển sang chế độ <code>{{mode}}</code>",
-		"didSwitchWithReason": "Roo đã chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}"
+		"wantsToSwitch": "Feb muốn chuyển sang chế độ <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "Feb muốn chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}",
+		"didSwitch": "Feb đã chuyển sang chế độ <code>{{mode}}</code>",
+		"didSwitchWithReason": "Feb đã chuyển sang chế độ <code>{{mode}}</code> vì: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo muốn tạo một nhiệm vụ phụ mới trong chế độ <code>{{mode}}</code>:",
-		"wantsToFinish": "Roo muốn hoàn thành nhiệm vụ phụ này",
+		"wantsToCreate": "Feb muốn tạo một nhiệm vụ phụ mới trong chế độ <code>{{mode}}</code>:",
+		"wantsToFinish": "Feb muốn hoàn thành nhiệm vụ phụ này",
 		"newTaskContent": "Hướng dẫn nhiệm vụ phụ",
 		"completionContent": "Nhiệm vụ phụ đã hoàn thành",
 		"resultContent": "Kết quả nhiệm vụ phụ",
@@ -155,7 +155,7 @@
 		"completionInstructions": "Nhiệm vụ phụ đã hoàn thành! Bạn có thể xem lại kết quả và đề xuất các sửa đổi hoặc bước tiếp theo. Nếu mọi thứ có vẻ tốt, hãy xác nhận để trả kết quả về nhiệm vụ chính."
 	},
 	"questions": {
-		"hasQuestion": "Roo có một câu hỏi:"
+		"hasQuestion": "Feb có một câu hỏi:"
 	},
 	"taskCompleted": "Nhiệm vụ hoàn thành",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "Tự động phê duyệt:",
 		"none": "Không",
-		"description": "Tự động phê duyệt cho phép Roo Code thực hiện hành động mà không cần xin phép. Chỉ bật cho các hành động bạn hoàn toàn tin tưởng. Cấu hình chi tiết hơn có sẵn trong <settingsLink>Cài đặt</settingsLink>."
+		"description": "Tự động phê duyệt cho phép Feb Code thực hiện hành động mà không cần xin phép. Chỉ bật cho các hành động bạn hoàn toàn tin tưởng. Cấu hình chi tiết hơn có sẵn trong <settingsLink>Cài đặt</settingsLink>."
 	},
 	"reasoning": {
 		"thinking": "Đang suy nghĩ",
@@ -181,8 +181,8 @@
 		"copyToInput": "Sao chép vào ô nhập liệu (hoặc Shift + nhấp chuột)"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.13 Đã phát hành",
-		"description": "Roo Code 3.13 mang đến các tính năng và cải tiến mới dựa trên phản hồi của bạn.",
+		"title": "🎉 Feb Code 3.13 Đã phát hành",
+		"description": "Feb Code 3.13 mang đến các tính năng và cải tiến mới dựa trên phản hồi của bạn.",
 		"whatsNew": "Có gì mới",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Bây giờ bạn có thể sử dụng biến thể thinking của Gemini 2.5 Flash và chỉ định ngân sách token cho thinking",
 		"feature2": "<bold>Cải tiến giao diện người dùng</bold>: Tiêu đề nhiệm vụ, giao diện trò chuyện, xem trước lịch sử và màn hình chào mừng đã được nâng cấp về mặt hình ảnh",
@@ -191,7 +191,7 @@
 		"detailsDiscussLinks": "Nhận thêm chi tiết và thảo luận tại <discordLink>Discord</discordLink> và <redditLink>Reddit</redditLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo muốn sử dụng trình duyệt:",
+		"rooWantsToUse": "Feb muốn sử dụng trình duyệt:",
 		"consoleLogs": "Nhật ký bảng điều khiển",
 		"noNewLogs": "(Không có nhật ký mới)",
 		"screenshot": "Ảnh chụp màn hình trình duyệt",

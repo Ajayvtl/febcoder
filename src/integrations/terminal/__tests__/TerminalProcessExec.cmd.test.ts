@@ -77,7 +77,7 @@ async function testCmdCommand(
 			executeCommand: jest.fn(),
 			cwd: vscode.Uri.file("C:\\test\\path"),
 		},
-		name: "Roo Code",
+		name: "Feb Code",
 		processId: Promise.resolve(123),
 		creationOptions: {},
 		exitStatus: undefined,
@@ -105,10 +105,10 @@ async function testCmdCommand(
 
 		if (useMock) {
 			// Use CMD-specific mock stream with predefined output
-			;({ stream, exitCode } = createCmdMockStream(expectedOutput))
+			; ({ stream, exitCode } = createCmdMockStream(expectedOutput))
 		} else {
 			// Set up the real command stream
-			;({ stream, exitCode } = createCmdCommandStream(command))
+			; ({ stream, exitCode } = createCmdCommandStream(command))
 		}
 
 		// Configure the mock terminal to return our stream

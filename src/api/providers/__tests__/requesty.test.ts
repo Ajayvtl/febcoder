@@ -62,27 +62,27 @@ describe("RequestyHandler", () => {
 			}
 		})
 
-		// Mock OpenAI constructor
-		;(OpenAI as jest.MockedClass<typeof OpenAI>).mockImplementation(
-			() =>
-				({
-					chat: {
-						completions: {
-							create: (params: any) => {
-								// Store params for verification
-								const result = mockCreate(params)
-								// Make params available for test assertions
-								;(result as any).params = params
-								return result
+			// Mock OpenAI constructor
+			; (OpenAI as jest.MockedClass<typeof OpenAI>).mockImplementation(
+				() =>
+					({
+						chat: {
+							completions: {
+								create: (params: any) => {
+									// Store params for verification
+									const result = mockCreate(params)
+										// Make params available for test assertions
+										; (result as any).params = params
+									return result
+								},
 							},
 						},
-					},
-				}) as unknown as OpenAI,
-		)
+					}) as unknown as OpenAI,
+			)
 
-		// Mock transform functions
-		;(convertToOpenAiMessages as jest.Mock).mockImplementation((messages) => messages)
-		;(convertToR1Format as jest.Mock).mockImplementation((messages) => messages)
+			// Mock transform functions
+			; (convertToOpenAiMessages as jest.Mock).mockImplementation((messages) => messages)
+			; (convertToR1Format as jest.Mock).mockImplementation((messages) => messages)
 
 		// Create handler instance
 		handler = new RequestyHandler(defaultOptions)
@@ -94,8 +94,8 @@ describe("RequestyHandler", () => {
 				baseURL: "https://router.requesty.ai/v1",
 				apiKey: defaultOptions.requestyApiKey,
 				defaultHeaders: {
-					"HTTP-Referer": "https://github.com/RooVetGit/Roo-Cline",
-					"X-Title": "Roo Code",
+					"HTTP-Referer": "https://github.com/FebVetGit/Feb-Cline",
+					"X-Title": "Feb Code",
 				},
 			})
 		})

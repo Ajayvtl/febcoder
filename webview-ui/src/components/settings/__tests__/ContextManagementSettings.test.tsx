@@ -5,9 +5,9 @@ import { render, screen, fireEvent } from "@testing-library/react"
 import { ContextManagementSettings } from "../ContextManagementSettings"
 
 class MockResizeObserver {
-	observe() {}
-	unobserve() {}
-	disconnect() {}
+	observe() { }
+	unobserve() { }
+	disconnect() { }
 }
 
 global.ResizeObserver = MockResizeObserver
@@ -28,7 +28,7 @@ describe("ContextManagementSettings", () => {
 	const defaultProps = {
 		maxOpenTabsContext: 20,
 		maxWorkspaceFiles: 200,
-		showRooIgnoredFiles: false,
+		showFebIgnoredFiles: false,
 		setCachedStateField: jest.fn(),
 	}
 
@@ -48,8 +48,8 @@ describe("ContextManagementSettings", () => {
 		expect(workspaceFilesSlider).toBeInTheDocument()
 
 		// Show .rooignore'd files
-		const showRooIgnoredFilesCheckbox = screen.getByTestId("show-rooignored-files-checkbox")
-		expect(showRooIgnoredFilesCheckbox).toBeInTheDocument()
+		const showFebIgnoredFilesCheckbox = screen.getByTestId("show-rooignored-files-checkbox")
+		expect(showFebIgnoredFilesCheckbox).toBeInTheDocument()
 		expect(screen.getByTestId("show-rooignored-files-checkbox")).not.toBeChecked()
 	})
 
@@ -77,6 +77,6 @@ describe("ContextManagementSettings", () => {
 		const checkbox = screen.getByTestId("show-rooignored-files-checkbox")
 		fireEvent.click(checkbox)
 
-		expect(defaultProps.setCachedStateField).toHaveBeenCalledWith("showRooIgnoredFiles", true)
+		expect(defaultProps.setCachedStateField).toHaveBeenCalledWith("showFebIgnoredFiles", true)
 	})
 })

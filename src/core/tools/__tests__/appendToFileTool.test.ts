@@ -9,7 +9,7 @@ import { ToolUse, AskApproval, HandleError, PushToolResult, RemoveClosingTag } f
 import { ClineAsk } from "../../../shared/ExtensionMessage"
 import { FileContextTracker } from "../../context-tracking/FileContextTracker"
 import { DiffViewProvider } from "../../../integrations/editor/DiffViewProvider"
-import { RooIgnoreController } from "../../ignore/RooIgnoreController"
+import { FebIgnoreController } from "../../ignore/FebIgnoreController"
 
 // Mock dependencies
 jest.mock("../../Cline")
@@ -81,7 +81,7 @@ describe("appendToFileTool", () => {
 			getFileContextTracker: jest.fn().mockReturnValue(mockFileContextTracker),
 			rooIgnoreController: {
 				validateAccess: jest.fn().mockReturnValue(true),
-			} as unknown as RooIgnoreController,
+			} as unknown as FebIgnoreController,
 			api: {
 				getModel: jest.fn().mockReturnValue({
 					id: "gpt-4",
@@ -264,10 +264,10 @@ describe("appendToFileTool", () => {
 			>
 			mockCline.rooIgnoreController = {
 				validateAccess: validateAccessMock,
-			} as unknown as RooIgnoreController
-			const mockRooIgnoreError = "RooIgnore error"
-			;(formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockRooIgnoreError)
-			;(formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
+			} as unknown as FebIgnoreController
+			const mockFebIgnoreError = "FebIgnore error"
+				; (formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockFebIgnoreError)
+				; (formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
 
 			// Execute
 			await appendToFileTool(

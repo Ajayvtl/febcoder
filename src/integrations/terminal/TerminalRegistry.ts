@@ -50,7 +50,7 @@ export class TerminalRegistry {
 						terminalInfo.setActiveStream(stream)
 					} else {
 						console.error(
-							"[TerminalRegistry] Shell execution started, but not from a Roo-registered terminal:",
+							"[TerminalRegistry] Shell execution started, but not from a Feb-registered terminal:",
 							e,
 						)
 					}
@@ -74,7 +74,7 @@ export class TerminalRegistry {
 
 					if (!terminalInfo) {
 						console.error(
-							"[TerminalRegistry] Shell execution ended, but not from a Roo-registered terminal:",
+							"[TerminalRegistry] Shell execution ended, but not from a Feb-registered terminal:",
 							e,
 						)
 						return
@@ -162,7 +162,7 @@ export class TerminalRegistry {
 
 		const terminal = vscode.window.createTerminal({
 			cwd,
-			name: "Roo Code",
+			name: "Feb Code",
 			iconPath: new vscode.ThemeIcon("rocket"),
 			env,
 		})
@@ -344,7 +344,7 @@ export class TerminalRegistry {
 
 		// This is the same path used by the CLI command
 		return path.join(
-			vscode.env.appRoot,
+			vscode.env.appFebt,
 			"out",
 			"vs",
 			"workbench",

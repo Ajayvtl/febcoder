@@ -4,7 +4,7 @@ import type { ClineMessage } from "../../../src/exports/roo-code"
 
 import { sleep, waitFor, waitUntilCompleted } from "./utils"
 
-suite("Roo Code Subtasks", () => {
+suite("Feb Code Subtasks", () => {
 	test("Should handle subtask cancellation and resumption correctly", async () => {
 		const api = globalThis.api
 
@@ -50,7 +50,7 @@ suite("Roo Code Subtasks", () => {
 		// "Parent task resumed".
 		assert.ok(
 			messages[parentTaskId].find(({ type, text }) => type === "say" && text === "Parent task resumed") ===
-				undefined,
+			undefined,
 			"Parent task should not have resumed after subtask cancellation",
 		)
 
@@ -64,7 +64,7 @@ suite("Roo Code Subtasks", () => {
 		// The parent task should still not have resumed.
 		assert.ok(
 			messages[parentTaskId].find(({ type, text }) => type === "say" && text === "Parent task resumed") ===
-				undefined,
+			undefined,
 			"Parent task should not have resumed after subtask cancellation",
 		)
 

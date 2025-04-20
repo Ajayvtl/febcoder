@@ -1,6 +1,6 @@
-import { RooCodeSettings } from "./roo-code.js"
+import { FebCodeSettings } from "./roo-code.js"
 
-export const rooCodeDefaults: RooCodeSettings = {
+export const rooCodeDefaults: FebCodeSettings = {
 	apiProvider: "openrouter",
 	openRouterUseMiddleOutTransform: false,
 
@@ -41,7 +41,7 @@ export const rooCodeDefaults: RooCodeSettings = {
 
 	maxOpenTabsContext: 20,
 	maxWorkspaceFiles: 200,
-	showRooIgnoredFiles: true,
+	showFebIgnoredFiles: true,
 	maxReadFileLine: 500,
 
 	terminalOutputLineLimit: 500,

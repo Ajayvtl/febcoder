@@ -37,8 +37,8 @@ const addLineNumbersSpy = jest.requireMock("../../integrations/misc/extract-text
 let mockInputContent = ""
 jest.mock("../../services/tree-sitter")
 jest.mock("isbinaryfile")
-jest.mock("../ignore/RooIgnoreController", () => ({
-	RooIgnoreController: class {
+jest.mock("../ignore/FebIgnoreController", () => ({
+	FebIgnoreController: class {
 		initialize() {
 			return Promise.resolve()
 		}
@@ -546,7 +546,7 @@ describe("read_file tool XML output structure", () => {
 			expect(result).not.toContain(`<content`)
 		})
 
-		it("should include error tag for RooIgnore error", async () => {
+		it("should include error tag for FebIgnore error", async () => {
 			// Execute - skip addLineNumbers check as it returns early with an error
 			const result = await executeReadFileTool({}, { validateAccess: false, skipAddLineNumbersCheck: true })
 

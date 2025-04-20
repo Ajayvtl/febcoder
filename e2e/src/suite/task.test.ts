@@ -4,7 +4,7 @@ import type { ClineMessage } from "../../../src/exports/roo-code"
 
 import { waitUntilCompleted } from "./utils"
 
-suite("Roo Code Task", () => {
+suite("Feb Code Task", () => {
 	test("Should handle prompt and response correctly", async () => {
 		const api = globalThis.api
 
@@ -25,9 +25,9 @@ suite("Roo Code Task", () => {
 
 		assert.ok(
 			!!messages.find(
-				({ say, text }) => (say === "completion_result" || say === "text") && text?.includes("My name is Roo"),
+				({ say, text }) => (say === "completion_result" || say === "text") && text?.includes("My name is Feb"),
 			),
-			`Completion should include "My name is Roo"`,
+			`Completion should include "My name is Feb"`,
 		)
 	})
 })

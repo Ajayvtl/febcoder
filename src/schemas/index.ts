@@ -29,6 +29,8 @@ export const providerNames = [
 	"human-relay",
 	"fake-ai",
 	"xai",
+	"perplexity",
+	"cloudgroq",
 ] as const
 
 export const providerNamesSchema = z.enum(providerNames)
@@ -537,7 +539,7 @@ export const globalSettingsSchema = z.object({
 
 	maxOpenTabsContext: z.number().optional(),
 	maxWorkspaceFiles: z.number().optional(),
-	showRooIgnoredFiles: z.boolean().optional(),
+	showFebIgnoredFiles: z.boolean().optional(),
 	maxReadFileLine: z.number().optional(),
 
 	terminalOutputLineLimit: z.number().optional(),
@@ -612,7 +614,7 @@ const globalSettingsRecord: GlobalSettingsRecord = {
 
 	maxOpenTabsContext: undefined,
 	maxWorkspaceFiles: undefined,
-	showRooIgnoredFiles: undefined,
+	showFebIgnoredFiles: undefined,
 	maxReadFileLine: undefined,
 
 	terminalOutputLineLimit: undefined,
@@ -648,12 +650,12 @@ const globalSettingsRecord: GlobalSettingsRecord = {
 export const GLOBAL_SETTINGS_KEYS = Object.keys(globalSettingsRecord) as Keys<GlobalSettings>[]
 
 /**
- * RooCodeSettings
+ * FebCodeSettings
  */
 
 export const rooCodeSettingsSchema = providerSettingsSchema.merge(globalSettingsSchema)
 
-export type RooCodeSettings = GlobalSettings & ProviderSettings
+export type FebCodeSettings = GlobalSettings & ProviderSettings
 
 /**
  * SecretState
@@ -705,10 +707,10 @@ export const isSecretStateKey = (key: string): key is Keys<SecretState> =>
  * GlobalState
  */
 
-export type GlobalState = Omit<RooCodeSettings, Keys<SecretState>>
+export type GlobalState = Omit<FebCodeSettings, Keys<SecretState>>
 
 export const GLOBAL_STATE_KEYS = [...GLOBAL_SETTINGS_KEYS, ...PROVIDER_SETTINGS_KEYS].filter(
-	(key: Keys<RooCodeSettings>) => !SECRET_STATE_KEYS.includes(key as Keys<SecretState>),
+	(key: Keys<FebCodeSettings>) => !SECRET_STATE_KEYS.includes(key as Keys<SecretState>),
 ) as Keys<GlobalState>[]
 
 export const isGlobalStateKey = (key: string): key is Keys<GlobalState> =>
@@ -858,10 +860,10 @@ export const toolUsageSchema = z.record(
 export type ToolUsage = z.infer<typeof toolUsageSchema>
 
 /**
- * RooCodeEvent
+ * FebCodeEvent
  */
 
-export enum RooCodeEventName {
+export enum FebCodeEventName {
 	Message = "message",
 	TaskCreated = "taskCreated",
 	TaskStarted = "taskStarted",
@@ -876,26 +878,26 @@ export enum RooCodeEventName {
 }
 
 export const rooCodeEventsSchema = z.object({
-	[RooCodeEventName.Message]: z.tuple([
+	[FebCodeEventName.Message]: z.tuple([
 		z.object({
 			taskId: z.string(),
 			action: z.union([z.literal("created"), z.literal("updated")]),
 			message: clineMessageSchema,
 		}),
 	]),
-	[RooCodeEventName.TaskCreated]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskStarted]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskModeSwitched]: z.tuple([z.string(), z.string()]),
-	[RooCodeEventName.TaskPaused]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskUnpaused]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskAskResponded]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskAborted]: z.tuple([z.string()]),
-	[RooCodeEventName.TaskSpawned]: z.tuple([z.string(), z.string()]),
-	[RooCodeEventName.TaskCompleted]: z.tuple([z.string(), tokenUsageSchema, toolUsageSchema]),
-	[RooCodeEventName.TaskTokenUsageUpdated]: z.tuple([z.string(), tokenUsageSchema]),
+	[FebCodeEventName.TaskCreated]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskStarted]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskModeSwitched]: z.tuple([z.string(), z.string()]),
+	[FebCodeEventName.TaskPaused]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskUnpaused]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskAskResponded]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskAborted]: z.tuple([z.string()]),
+	[FebCodeEventName.TaskSpawned]: z.tuple([z.string(), z.string()]),
+	[FebCodeEventName.TaskCompleted]: z.tuple([z.string(), tokenUsageSchema, toolUsageSchema]),
+	[FebCodeEventName.TaskTokenUsageUpdated]: z.tuple([z.string(), tokenUsageSchema]),
 })
 
-export type RooCodeEvents = z.infer<typeof rooCodeEventsSchema>
+export type FebCodeEvents = z.infer<typeof rooCodeEventsSchema>
 
 /**
  * TypeDefinition
@@ -911,7 +913,7 @@ export const typeDefinitions: TypeDefinition[] = [
 	{ schema: globalSettingsSchema, identifier: "GlobalSettings" },
 	{ schema: clineMessageSchema, identifier: "ClineMessage" },
 	{ schema: tokenUsageSchema, identifier: "TokenUsage" },
-	{ schema: rooCodeEventsSchema, identifier: "RooCodeEvents" },
+	{ schema: rooCodeEventsSchema, identifier: "FebCodeEvents" },
 ]
 
 // Also export as default for ESM compatibility

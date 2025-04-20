@@ -1,5 +1,5 @@
 {
-	"greeting": "Bem-vindo ao Roo Code",
+	"greeting": "Bem-vindo ao Feb Code",
 	"task": {
 		"title": "Tarefa",
 		"seeMore": "Ver mais",
@@ -65,7 +65,7 @@
 		"tooltip": "Cancelar a operação atual"
 	},
 	"scrollToBottom": "Rolar para o final do chat",
-	"onboarding": "<strong>Sua lista de tarefas neste espaço de trabalho está vazia.</strong> Comece digitando uma tarefa abaixo. Não sabe como começar? Leia mais sobre o que o Roo pode fazer por você nos <DocsLink>documentos</DocsLink>.",
+	"onboarding": "<strong>Sua lista de tarefas neste espaço de trabalho está vazia.</strong> Comece digitando uma tarefa abaixo. Não sabe como começar? Leia mais sobre o que o Feb pode fazer por você nos <DocsLink>documentos</DocsLink>.",
 	"selectMode": "Selecionar modo de interação",
 	"selectApiConfig": "Selecionar configuração de API",
 	"enhancePrompt": "Aprimorar prompt com contexto adicional",
@@ -86,7 +86,7 @@
 	"diffError": {
 		"title": "Edição mal-sucedida"
 	},
-	"troubleMessage": "Roo está tendo problemas...",
+	"troubleMessage": "Feb está tendo problemas...",
 	"apiRequest": {
 		"title": "Requisição API",
 		"failed": "Requisição API falhou",
@@ -112,42 +112,42 @@
 		"current": "Atual"
 	},
 	"instructions": {
-		"wantsToFetch": "Roo quer buscar instruções detalhadas para ajudar com a tarefa atual"
+		"wantsToFetch": "Feb quer buscar instruções detalhadas para ajudar com a tarefa atual"
 	},
 	"fileOperations": {
-		"wantsToRead": "Roo quer ler este arquivo:",
-		"wantsToReadOutsideWorkspace": "Roo quer ler este arquivo fora do espaço de trabalho:",
-		"didRead": "Roo leu este arquivo:",
-		"wantsToEdit": "Roo quer editar este arquivo:",
-		"wantsToEditOutsideWorkspace": "Roo quer editar este arquivo fora do espaço de trabalho:",
-		"wantsToCreate": "Roo quer criar um novo arquivo:"
+		"wantsToRead": "Feb quer ler este arquivo:",
+		"wantsToReadOutsideWorkspace": "Feb quer ler este arquivo fora do espaço de trabalho:",
+		"didRead": "Feb leu este arquivo:",
+		"wantsToEdit": "Feb quer editar este arquivo:",
+		"wantsToEditOutsideWorkspace": "Feb quer editar este arquivo fora do espaço de trabalho:",
+		"wantsToCreate": "Feb quer criar um novo arquivo:"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Roo quer visualizar os arquivos de nível superior neste diretório:",
-		"didViewTopLevel": "Roo visualizou os arquivos de nível superior neste diretório:",
-		"wantsToViewRecursive": "Roo quer visualizar recursivamente todos os arquivos neste diretório:",
-		"didViewRecursive": "Roo visualizou recursivamente todos os arquivos neste diretório:",
-		"wantsToViewDefinitions": "Roo quer visualizar nomes de definição de código-fonte usados neste diretório:",
-		"didViewDefinitions": "Roo visualizou nomes de definição de código-fonte usados neste diretório:",
-		"wantsToSearch": "Roo quer pesquisar neste diretório por <code>{{regex}}</code>:",
-		"didSearch": "Roo pesquisou neste diretório por <code>{{regex}}</code>:"
+		"wantsToViewTopLevel": "Feb quer visualizar os arquivos de nível superior neste diretório:",
+		"didViewTopLevel": "Feb visualizou os arquivos de nível superior neste diretório:",
+		"wantsToViewRecursive": "Feb quer visualizar recursivamente todos os arquivos neste diretório:",
+		"didViewRecursive": "Feb visualizou recursivamente todos os arquivos neste diretório:",
+		"wantsToViewDefinitions": "Feb quer visualizar nomes de definição de código-fonte usados neste diretório:",
+		"didViewDefinitions": "Feb visualizou nomes de definição de código-fonte usados neste diretório:",
+		"wantsToSearch": "Feb quer pesquisar neste diretório por <code>{{regex}}</code>:",
+		"didSearch": "Feb pesquisou neste diretório por <code>{{regex}}</code>:"
 	},
 	"commandOutput": "Saída do comando",
 	"response": "Resposta",
 	"arguments": "Argumentos",
 	"mcp": {
-		"wantsToUseTool": "Roo quer usar uma ferramenta no servidor MCP {{serverName}}:",
-		"wantsToAccessResource": "Roo quer acessar um recurso no servidor MCP {{serverName}}:"
+		"wantsToUseTool": "Feb quer usar uma ferramenta no servidor MCP {{serverName}}:",
+		"wantsToAccessResource": "Feb quer acessar um recurso no servidor MCP {{serverName}}:"
 	},
 	"modes": {
-		"wantsToSwitch": "Roo quer mudar para o modo <code>{{mode}}</code>",
-		"wantsToSwitchWithReason": "Roo quer mudar para o modo <code>{{mode}}</code> porque: {{reason}}",
-		"didSwitch": "Roo mudou para o modo <code>{{mode}}</code>",
-		"didSwitchWithReason": "Roo mudou para o modo <code>{{mode}}</code> porque: {{reason}}"
+		"wantsToSwitch": "Feb quer mudar para o modo <code>{{mode}}</code>",
+		"wantsToSwitchWithReason": "Feb quer mudar para o modo <code>{{mode}}</code> porque: {{reason}}",
+		"didSwitch": "Feb mudou para o modo <code>{{mode}}</code>",
+		"didSwitchWithReason": "Feb mudou para o modo <code>{{mode}}</code> porque: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Roo quer criar uma nova subtarefa no modo <code>{{mode}}</code>:",
-		"wantsToFinish": "Roo quer finalizar esta subtarefa",
+		"wantsToCreate": "Feb quer criar uma nova subtarefa no modo <code>{{mode}}</code>:",
+		"wantsToFinish": "Feb quer finalizar esta subtarefa",
 		"newTaskContent": "Instruções da subtarefa",
 		"completionContent": "Subtarefa concluída",
 		"resultContent": "Resultados da subtarefa",
@@ -155,7 +155,7 @@
 		"completionInstructions": "Subtarefa concluída! Você pode revisar os resultados e sugerir correções ou próximos passos. Se tudo parecer bom, confirme para retornar o resultado à tarefa principal."
 	},
 	"questions": {
-		"hasQuestion": "Roo tem uma pergunta:"
+		"hasQuestion": "Feb tem uma pergunta:"
 	},
 	"taskCompleted": "Tarefa concluída",
 	"shellIntegration": {
@@ -171,7 +171,7 @@
 	"autoApprove": {
 		"title": "Aprovação automática:",
 		"none": "Nenhuma",
-		"description": "A aprovação automática permite que o Roo Code execute ações sem pedir permissão. Ative apenas para ações nas quais você confia totalmente. Configuração mais detalhada disponível nas <settingsLink>Configurações</settingsLink>."
+		"description": "A aprovação automática permite que o Feb Code execute ações sem pedir permissão. Ative apenas para ações nas quais você confia totalmente. Configuração mais detalhada disponível nas <settingsLink>Configurações</settingsLink>."
 	},
 	"reasoning": {
 		"thinking": "Pensando",
@@ -181,8 +181,8 @@
 		"copyToInput": "Copiar para entrada (ou Shift + clique)"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.13 Lançado",
-		"description": "Roo Code 3.13 traz novos recursos e melhorias baseados no seu feedback.",
+		"title": "🎉 Feb Code 3.13 Lançado",
+		"description": "Feb Code 3.13 traz novos recursos e melhorias baseados no seu feedback.",
 		"whatsNew": "O que há de novo",
 		"feature1": "<bold>Gemini 2.5 Flash Thinking</bold>: Agora você pode usar a variante thinking do Gemini 2.5 Flash e especificar um orçamento de tokens para thinking",
 		"feature2": "<bold>Melhorias na UI</bold>: O cabeçalho de tarefas, visualização de chat, pré-visualização do histórico e tela de boas-vindas foram visualmente aprimorados",
@@ -191,7 +191,7 @@
 		"detailsDiscussLinks": "Obtenha mais detalhes e participe da discussão no <discordLink>Discord</discordLink> e <redditLink>Reddit</redditLink> 🚀"
 	},
 	"browser": {
-		"rooWantsToUse": "Roo quer usar o navegador:",
+		"rooWantsToUse": "Feb quer usar o navegador:",
 		"consoleLogs": "Logs do console",
 		"noNewLogs": "(Sem novos logs)",
 		"screenshot": "Captura de tela do navegador",

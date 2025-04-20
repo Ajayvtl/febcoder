@@ -39,11 +39,11 @@ beforeEach(() => {
 		if (ignoredFileAttemptedToAccess) {
 			await cline.say("rooignore_error", ignoredFileAttemptedToAccess)
 			// Call the mocked formatResponse functions with the correct arguments
-			const mockRooIgnoreError = "RooIgnore error"
-			;(formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockRooIgnoreError)
-			;(formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
+			const mockFebIgnoreError = "FebIgnore error"
+				; (formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockFebIgnoreError)
+				; (formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
 			formatResponse.rooIgnoreError(ignoredFileAttemptedToAccess)
-			formatResponse.toolError(mockRooIgnoreError)
+			formatResponse.toolError(mockFebIgnoreError)
 			pushToolResult("Tool error")
 			return
 		}
@@ -247,9 +247,9 @@ describe("executeCommandTool", () => {
 				validateCommand: validateCommandMock,
 			}
 
-			const mockRooIgnoreError = "RooIgnore error"
-			;(formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockRooIgnoreError)
-			;(formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
+			const mockFebIgnoreError = "FebIgnore error"
+				; (formatResponse.rooIgnoreError as jest.Mock).mockReturnValue(mockFebIgnoreError)
+				; (formatResponse.toolError as jest.Mock).mockReturnValue("Tool error")
 
 			// Execute
 			await executeCommandTool(
@@ -265,7 +265,7 @@ describe("executeCommandTool", () => {
 			expect(validateCommandMock).toHaveBeenCalledWith("cat .env")
 			expect(mockCline.say).toHaveBeenCalledWith("rooignore_error", ".env")
 			expect(formatResponse.rooIgnoreError).toHaveBeenCalledWith(".env")
-			expect(formatResponse.toolError).toHaveBeenCalledWith(mockRooIgnoreError)
+			expect(formatResponse.toolError).toHaveBeenCalledWith(mockFebIgnoreError)
 			expect(mockPushToolResult).toHaveBeenCalled()
 			expect(mockAskApproval).not.toHaveBeenCalled()
 			expect(mockExecuteCommand).not.toHaveBeenCalled()

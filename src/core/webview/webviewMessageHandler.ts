@@ -949,8 +949,8 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			await updateGlobalState("language", message.text as Language)
 			await provider.postStateToWebview()
 			break
-		case "showRooIgnoredFiles":
-			await updateGlobalState("showRooIgnoredFiles", message.bool ?? true)
+		case "showFebIgnoredFiles":
+			await updateGlobalState("showFebIgnoredFiles", message.bool ?? true)
 			await provider.postStateToWebview()
 			break
 		case "maxReadFileLine":

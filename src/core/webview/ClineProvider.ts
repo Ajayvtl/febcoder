@@ -9,7 +9,7 @@ import axios from "axios"
 import pWaitFor from "p-wait-for"
 import * as vscode from "vscode"
 
-import { GlobalState, ProviderSettings, RooCodeSettings } from "../../schemas"
+import { GlobalState, ProviderSettings, FebCodeSettings } from "../../schemas"
 import { t } from "../../i18n"
 import { setPanel } from "../../activate/registerCommands"
 import {
@@ -393,7 +393,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		webviewView.webview.options = {
 			// Allow scripts in the webview
 			enableScripts: true,
-			localResourceRoots: [this.contextProxy.extensionUri],
+			localResourceFebts: [this.contextProxy.extensionUri],
 		}
 
 		webviewView.webview.html =
@@ -657,7 +657,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 					<script nonce="${nonce}">
 						window.IMAGES_BASE_URI = "${imagesUri}"					
 					</script>
-					<title>Roo Code</title>
+					<title>Feb Code</title>
 				</head>
 				<body>
 					<div id="root"></div>
@@ -742,7 +742,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 			<script nonce="${nonce}">
 				window.IMAGES_BASE_URI = "${imagesUri}"
 			</script>
-            <title>Roo Code</title>
+            <title>Feb Code</title>
           </head>
           <body>
             <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -896,14 +896,14 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		// Get platform-specific application data directory
 		let mcpServersDir: string
 		if (process.platform === "win32") {
-			// Windows: %APPDATA%\Roo-Code\MCP
-			mcpServersDir = path.join(os.homedir(), "AppData", "Roaming", "Roo-Code", "MCP")
+			// Windows: %APPDATA%\Feb-Code\MCP
+			mcpServersDir = path.join(os.homedir(), "AppData", "Roaming", "Feb-Code", "MCP")
 		} else if (process.platform === "darwin") {
 			// macOS: ~/Documents/Cline/MCP
 			mcpServersDir = path.join(os.homedir(), "Documents", "Cline", "MCP")
 		} else {
 			// Linux: ~/.local/share/Cline/MCP
-			mcpServersDir = path.join(os.homedir(), ".local", "share", "Roo-Code", "MCP")
+			mcpServersDir = path.join(os.homedir(), ".local", "share", "Feb-Code", "MCP")
 		}
 
 		try {
@@ -1214,7 +1214,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 			maxWorkspaceFiles,
 			browserToolEnabled,
 			telemetrySetting,
-			showRooIgnoredFiles,
+			showFebIgnoredFiles,
 			language,
 			maxReadFileLine,
 		} = await this.getState()
@@ -1291,7 +1291,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 			telemetrySetting,
 			telemetryKey,
 			machineId,
-			showRooIgnoredFiles: showRooIgnoredFiles ?? true,
+			showFebIgnoredFiles: showFebIgnoredFiles ?? true,
 			language,
 			renderContext: this.renderContext,
 			maxReadFileLine: maxReadFileLine ?? 500,
@@ -1381,7 +1381,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 			openRouterUseMiddleOutTransform: stateValues.openRouterUseMiddleOutTransform ?? true,
 			browserToolEnabled: stateValues.browserToolEnabled ?? true,
 			telemetrySetting: stateValues.telemetrySetting || "unset",
-			showRooIgnoredFiles: stateValues.showRooIgnoredFiles ?? true,
+			showFebIgnoredFiles: stateValues.showFebIgnoredFiles ?? true,
 			maxReadFileLine: stateValues.maxReadFileLine ?? 500,
 		}
 	}
@@ -1412,11 +1412,11 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		return this.contextProxy.getValue(key)
 	}
 
-	public async setValue<K extends keyof RooCodeSettings>(key: K, value: RooCodeSettings[K]) {
+	public async setValue<K extends keyof FebCodeSettings>(key: K, value: FebCodeSettings[K]) {
 		await this.contextProxy.setValue(key, value)
 	}
 
-	public getValue<K extends keyof RooCodeSettings>(key: K) {
+	public getValue<K extends keyof FebCodeSettings>(key: K) {
 		return this.contextProxy.getValue(key)
 	}
 
@@ -1424,7 +1424,7 @@ export class ClineProvider extends EventEmitter<ClineProviderEvents> implements 
 		return this.contextProxy.getValues()
 	}
 
-	public async setValues(values: RooCodeSettings) {
+	public async setValues(values: FebCodeSettings) {
 		await this.contextProxy.setValues(values)
 	}
 
